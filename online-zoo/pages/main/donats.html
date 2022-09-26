@@ -20,9 +20,7 @@
           <nav class="header__nav">
             <ul class="header__list">
               <li class="header__item">
-                <a
-                  href="/zoo/pages/main/index.html"
-                  class="header__link header_about"
+                <a href="/index.html" class="header__link header_about"
                   >About</a
                 >
               </li>
@@ -188,7 +186,7 @@
                     onchange="checkButton()"
                   />
                   <input
-                    id="submitEmail"
+                    id="submitInitial__donats"
                     type="submit"
                     placeholder="Enter your Email"
                     value="Submit"
@@ -203,9 +201,13 @@
                   var email = document.getElementById("email").value;
 
                   if (email) {
-                    document.getElementById("submitEmail").disabled = false;
+                    document.getElementById(
+                      "submitInitial__donats"
+                    ).disabled = false;
                   } else {
-                    document.getElementById("submitEmail").disabled = true;
+                    document.getElementById(
+                      "submitInitial__donats"
+                    ).disabled = true;
                   }
                 }
               </script>
