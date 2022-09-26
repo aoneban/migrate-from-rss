@@ -370,6 +370,10 @@
     top: 400px;
     background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   }
+
+  .ellips_right:hover {
+    background: linear-gradient(113.96deg, #df622d 1.49%, #f0850a 101.44%);
+  }
   
   .arrow__right {
     display: block;
@@ -398,6 +402,10 @@
     left: -90px;
     top: 406px;
     background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  }
+
+  .ellips_left:hover {
+    background: linear-gradient(113.96deg, #df622d 1.49%, #f0850a 101.44%);
   }
   
   .button-choose {
