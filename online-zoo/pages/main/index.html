@@ -337,6 +337,108 @@
           leave feedback
         </button>
       </section>
-    
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="columns column__1">
+            <div class="logo__footer">
+              <a href="#">
+                <img src="../../assets/images/Logo.png" alt="user__logo" />
+              </a>
+            </div>
+            <button
+              onclick="document.location='/zoo/pages/main/donats.html'"
+              type="button"
+              class="button button__footer"
+            >
+              donate for volunteers
+            </button>
+            <div class="social">
+              <div class="facebook">
+                <a href="https://facebook.com" target="_blanc">
+                  <img src="../../assets/icons/Fill 211.png" alt="facebook" />
+                  <p>Facebook</p>
+                </a>
+              </div>
+              <div class="facebook twitter" target="_blanc">
+                <a href="https://twitter.com">
+                  <img src="../../assets/icons/Fill 172.png" alt="twitter" />
+                  <p>Twitter</p>
+                </a>
+              </div>
+              <div class="facebook instagram" target="_blanc">
+                <a href="https://instagram.com">
+                  <img src="../../assets/icons/Fill 166.png" alt="instagram" />
+                  <p>Instagram</p>
+                </a>
+              </div>
+              <div class="facebook youtube">
+                <a href="https://youtube.com" target="_blanc">
+                  <img src="../../assets/icons/Fill 213.png" alt="youtube" />
+                  <p>YouTube</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="columns column__2">
+            <nav class="menu__footer">
+              <ul>
+                <li>
+                  <a href="#" class="start">About</a>
+                </li>
+                <li>
+                  <a href="#">Map</a>
+                </li>
+                <li>
+                  <a href="#">Zoos</a>
+                </li>
+                <li>
+                  <a href="#">Content us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="columns column__3">
+            <div class="subscribe">
+              <p>Subscribe to our news</p>
+              <div class="input__sub">
+                <div>
+                  <form action="/submit.php" method="post">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      onchange="checkButton()"
+                    />
+                    <input
+                      id="submitEmail"
+                      type="submit"
+                      placeholder="Enter your Email"
+                      value="Submit"
+                      disabled
+                    />
+                  </form>
+                </div>
+                <script>
+                  document.getElementById("email").placeholder =
+                    "Enter your Email";
+                  function checkButton() {
+                    var email = document.getElementById("email").value;
+  
+                    if (email) {
+                      document.getElementById("submitEmail").disabled = false;
+                    } else {
+                      document.getElementById("submitEmail").disabled = true;
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="developer__template">
+              <p>Designed by Alisa Samborskaya</p>
+              <p>©RSSchool & ©Yem Digital 2021</p>
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

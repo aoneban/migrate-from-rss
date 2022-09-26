@@ -660,3 +660,377 @@
     margin-bottom: 180px;
   }
   
+.footer {
+    background-color: #000000;
+    height: 443px;
+  }
+  
+  .footer__wrapper {
+    display: block;
+    margin: 0 auto;
+    max-width: 1160px;
+  }
+  
+  .footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .menu__footer ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 370px;
+    list-style: none;
+  }
+  
+  .menu__footer a {
+    color: #eaf7fe;
+    text-decoration: none;
+    padding: 0 35px;
+    font-weight: 16px;
+  }
+  
+  .logo__footer {
+    margin-top: 41px;
+  }
+  
+  .button__footer {
+    width: 298px;
+    height: 54px;
+    border-radius: 5px;
+    margin-top: 68px;
+  }
+  
+  .social {
+    margin-top: 44px;
+  }
+  
+  .facebook {
+    position: relative;
+    padding: 6px 0;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: rgba(196, 196, 196, 0.5);
+  }
+  
+  .facebook img {
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .twitter img {
+    padding-left: 6px;
+  }
+  
+  .instagram img {
+    padding-left: 5px;
+  }
+  
+  .youtube img {
+    padding-left: 4px;
+    padding-bottom: 2px;
+  }
+  
+  .facebook p {
+    position: absolute;
+    left: 40px;
+    top: 4px;
+    color: #ffffff;
+    padding-bottom: 30px;
+  }
+  
+  .start {
+    color: #f9804b !important;
+  }
+  
+  .subscribe p {
+    margin-top: 40px;
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .input {
+    padding-left: 10px;
+    background: #000000;
+    font-size: 16px;
+    display: block;
+    color: #bdbdbd;
+    float: left;
+    height: 42px;
+    width: 228px;
+    border: 1px solid #c74a14;
+  }
+  
+  .button__submit {
+    color: #4b9200;
+    background: #f1f3f2;
+    width: 129px;
+    height: 42px;
+    border: 1px solid #4b9200;
+    border-radius: 0;
+    margin-left: 10px;
+  }
+  
+  .developer__template {
+    margin-top: 200px;
+    margin-left: 140px;
+  }
+  
+  .developer__template p {
+    font-weight: 100;
+    color: #ffffff;
+    padding: 8px 0;
+  }
+  
+  /*donations*/
+  
+  .information__wrapper {
+    max-width: 1600px;
+    padding-bottom: 180px;
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 210, 144, 0.7) 30.06%,
+        #febdab 100.95%,
+        rgba(254, 210, 144, 0.7) 106.36%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+  }
+  
+  .introductory {
+    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  
+  .introductory p:first-child {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    color: #ffffff;
+  }
+  
+  .donat_description {
+    font-weight: 500;
+    font-style: normal;
+    line-height: 140%;
+    color: #ffffff;
+  }
+  
+  .introductory p:last-child {
+    color: #fe9013;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    padding: 40px 0 60px 0;
+  }
+  
+  .choice__animal {
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+  }
+  
+  .choice__animal h2 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  
+  .choice__animal p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333b41;
+  }
+  
+  .choise__wrapper {
+    max-width: 976px;
+    margin: 0 auto;
+  }
+  
+  .calculation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  .item__2 {
+    position: relative;
+    padding: 10px 80px 0 30px;
+  }
+  
+  .number {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 15px;
+    margin-top: 55px;
+  }
+  
+  .value {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #333b41;
+  }
+  
+  .elem__1 {
+    position: absolute;
+  }
+  
+  .amount {
+    margin-top: 48px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+  }
+  
+  .progressbar img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .progressbar img:last-child {
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  
+  .donat__input {
+    display: block;
+    position: relative;
+  }
+  
+  .donat__input input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 268px;
+    height: 54px;
+    color: #929699;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    background: none;
+    border: 1px solid #929699;
+    outline: none;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .donat__input img {
+    position: absolute;
+    top: 16px;
+    right: 365px;
+  }
+  
+  .checkbokses {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  
+  .checkbokses img {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .button__donats {
+    display: block;
+    margin: 34px auto 0 auto;
+    width: 298px;
+    height: 54px;
+  }
+  
+  .choice__animal p:last-child {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333b41;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 62px;
+  }
+  
+  #email {
+    width: 228px;
+    height: 42px;
+    outline: none;
+    border: 1px solid orange;
+    background: #000000;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #bdbdbd;
+    padding-left: 10px;
+  }
+  
+  #submitEmail {
+    width: 129px;
+    height: 42px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #4b9200;
+    cursor: pointer;
+    border: 1px solid #4b9200;
+    border-radius: 5px;
+    background: #f1f3f2;
+    margin-left: 5px;
+  }
+  
