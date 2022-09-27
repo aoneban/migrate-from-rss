@@ -98,6 +98,7 @@
     color: #333b41;
     margin: 0 auto;
     text-align: center;
+    padding: 8px 0 0 14px;
   }
   
   section {
@@ -107,6 +108,8 @@
   
   .header__logo {
     padding-top: 14px;
+    padding-left: 9px;
+    
   }
   
   .header__wrapper {
@@ -127,10 +130,15 @@
   .header__list {
     display: flex;
     flex-direction: row;
-    margin-left: -280px;
-    flex-wrap: wrap;
+    margin-left: -295px;
+    padding-top: 6px;
+    flex-wrap:;
   }
-  
+
+  .header__item a:hover {
+    color: #c74a14;
+  }
+
   .header__link {
     font-weight: 500;
   }
@@ -192,7 +200,7 @@
   .button__header {
     position: absolute;
     left: calc(50% - 298px / 2 + 332px);
-    top: 70%;
+    top: 71%;
   }
   
   button:hover {
@@ -213,8 +221,8 @@
     position: absolute;
     width: 500.31px;
     height: 400px;
-    left: 74px;
-    top: 74px;
+    left: 80px;
+    top: 75px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
@@ -256,10 +264,16 @@
     font-size: 48px;
     line-height: 120%;
     color: #333b41;
+    padding-top: 10px;
+  }
+
+  .content-right span {
+    margin-right: 60px;
   }
   
   .content-right p {
     margin-top: 20px;
+    margin-left:10px;
     height: 42px;
     font-family: "Roboto";
     font-style: normal;
@@ -300,13 +314,14 @@
   .animals__wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
   }
   
   .animal {
     position: relative;
     border: 1px solid #fa6f32;
     border-radius: 5px;
-    margin-right: 18px;
     margin-bottom: 18px;
   }
   
@@ -336,7 +351,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .desk__icon img {
@@ -366,8 +381,8 @@
     border-radius: 50%;
     width: 62px;
     height: 62px;
-    right: -70px;
-    top: 400px;
+    right: -88px;
+    top: 409px;
     background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   }
 
@@ -399,7 +414,7 @@
     border-radius: 50%;
     width: 62px;
     height: 62px;
-    left: -90px;
+    left: -73px;
     top: 406px;
     background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   }
@@ -410,13 +425,11 @@
   
   .button-choose {
     display: block;
-    margin: 0 auto;
+    margin: 63px auto 95px auto;
     width: 298px;
     height: 54px;
     background: #fe9013;
     border-radius: 25px;
-    margin-bottom: 100px;
-    margin-top: 70px;
   }
   
   .side__flowers {
@@ -443,6 +456,12 @@
     height: 275px;
     right: -210px;
     top: -275px;
+  }
+
+  .feed__instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .feed {
@@ -508,12 +527,12 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   
   .pick__and__feed {
     display: block;
-    padding: 41px 0 30px 0;
+    padding: 45px 0 30px 20px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -526,7 +545,6 @@
   
   .p__bold {
     display: block;
-    margin-left: 99px;
     padding-bottom: 40px;
     font-family: "Roboto";
     font-style: normal;
@@ -534,11 +552,12 @@
     font-size: 24px;
     line-height: 120%;
     color: #333b41;
+    margin-right: 100px;
   }
   
   .small__bold {
     display: block;
-    margin-left: 99px;
+    margin-left:59px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
@@ -567,7 +586,8 @@
   .item__one {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px 60px;
+    padding: 20px 29px 70px;
+
   }
   
   .arrow {
@@ -587,10 +607,15 @@
   
   .opinion {
     position: relative;
-    margin-right: 30px;
+    margin-right: 21px;
+    margin-left: 10px;
     border-radius: 20px;
     padding: 0 16px;
     background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
+  }
+
+  .opinion:last-child {
+    margin-right: 0px;
   }
   
   .opinion::before {
@@ -675,8 +700,8 @@
 
   .palm_right img {
     position: absolute;
-    top: -40px;
-    right: -210px;
+    top: -34px;
+    right: -211px;
   }
   
 .footer {
@@ -708,9 +733,14 @@
   .menu__footer a {
     color: #eaf7fe;
     text-decoration: none;
-    padding: 0 35px;
-    font-weight: 16px;
+    padding-left: 65px;
+    font-size: 16px;
   }
+
+  .menu__footer a:hover {
+    color: #f9804b;
+  }
+
   
   .logo__footer {
     margin-top: 41px;
@@ -720,7 +750,10 @@
     width: 298px;
     height: 54px;
     border-radius: 5px;
-    margin-top: 68px;
+    margin-top: 62px;
+    margin-left: 10px;
+    font-weight: 500;
+    line-height: 140%;
   }
   
   .social {
@@ -735,6 +768,10 @@
     border-radius: 50%;
     margin-bottom: 10px;
     background: rgba(196, 196, 196, 0.5);
+  }
+
+  .facebook:hover {
+    background: #4B9200;
   }
   
   .facebook img {
@@ -762,12 +799,16 @@
     color: #ffffff;
     padding-bottom: 30px;
   }
+
+  .facebook p:hover {
+    color: #4B9200;
+  }
   
   .start {
     color: #f9804b !important;
   }
-  
-  .subscribe p {
+
+   .subscribe p {
     margin-top: 40px;
     margin-bottom: 14px;
     color: #ffffff;
@@ -784,7 +825,7 @@
     float: left;
     height: 42px;
     width: 228px;
-    border: 1px solid #c74a14;
+    border: 1px solid #F9804B;
   }
   
   .button__submit {
