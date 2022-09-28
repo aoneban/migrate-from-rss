@@ -661,15 +661,23 @@ button:hover {
   display: block;
 }
 
-.scroll__container {
+.scroll__main {
   position: relative;
+  width: 599px;
+  height: 8px;
+  left: calc(46.5% - 500px/2 - 0.5px);
+  top: 24px;
+  background: #F5F7F6;
+  border-radius: 5px!important;
+  border: 1px solid rgb(242, 228, 244);
+ 
 }
 
 .button__scroll {
   position: absolute;
-  top: 1px;
-  left: 282px;
-  bottom: 0;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
   width: 115.19px;
   height: 6px;
   background: #fe9013;
@@ -688,7 +696,7 @@ button:hover {
 
 .button__testimonials {
   display: block;
-  margin-top: 31px;
+  margin-top: 51px;
   position: relative;
   font-weight: 500;
   height: 54px;
