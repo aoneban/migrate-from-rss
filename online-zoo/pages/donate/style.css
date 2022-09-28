@@ -708,6 +708,7 @@ button:hover {
 .footer {
   background-color: #000000;
   height: 443px;
+  margin-top: -10px;
 }
 
 .footer__wrapper {
@@ -923,10 +924,11 @@ button:hover {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 120%;
   color: #333b41;
   margin-left: 10px;
+  margin-bottom: 9px;
 }
 
 .choise__wrapper {
@@ -975,6 +977,27 @@ button:hover {
   position: absolute;
 }
 
+.sum__item {
+  color: orange;
+}
+
+.list__sum {
+  margin-top: 15px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.choise__sum {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 140%;
+text-transform: uppercase;
+color: #333B41;
+}
+
 .amount {
   margin-top: 48px;
   font-family: "Roboto";
@@ -985,15 +1008,119 @@ button:hover {
   color: #000000;
 }
 
-.progressbar img {
-  display: block;
-  margin: 0 auto;
-}
-
-.progressbar img:last-child {
-  padding-left: 15px;
-  padding-top: 5px;
-}
+.radio__buttons__wrapper__2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  
+  .radio__buttons__container__2 {
+    display:block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+    width 100px;
+    height:50px;
+  
+  }
+  
+  .radio__buttons__container__2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+     
+  }
+  
+  .mark__check__2:after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: -16px;
+      left: -17px;
+      border: 2px #FE9013 solid;
+      border-radius: 50%;
+      opacity: 0;
+      }
+  
+  .mark__check__2:before {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      top: -7.5px;
+      left: -8.5px;
+      border: 2px #FE9013 solid;
+      border-radius: 50%;
+      transition: all 300ms ease-in;
+      opacity: 0;
+      }
+      
+      .mark__check__2 {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #FFEE2E;
+      left: 50%;
+      top: 0;
+      margin-left: -15px;
+      margin-top: 8px;
+      border-radius: 50%;
+      transition: all 300ms ease-in;
+  }
+      
+  .radio__buttons__container__2 input:checked ~ .mark__check__2 {
+    background-color: #4B9200;
+  }
+  
+  .radio__buttons__container__2 input ~ .mark__check__2:after {
+  background: none;
+  }
+  
+  .main__wrapper__2 {
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  width: 976px;
+  height: 27px;
+  left: 5px;
+  top: 0px;
+  background: #404950;
+  border-radius: 2px;
+  }
+  
+  .line__radio__2 {
+  position:absolute;
+  width: 915px;
+  height: 2px;
+  left: 30px;
+  top: 12px;
+  background: #72828E;
+  }
+  
+  .mark__check__start__2 {
+  transform: translate(10px, 0px);
+  }
+  
+  .mark__check__finish__2 {
+  transform: translate(-2px, 0px);
+  }
+  
+  .input__donate__2:checked + .mark__check__2:before {
+      opacity: 1;
+  }
+  
+  .input__donate__2:checked + .mark__check__2:after {
+      opacity: 1;
+  }
 
 .donat__input {
   display: block;
@@ -1087,7 +1214,7 @@ input[type="number"] {
 
 .button__donats {
   display: block;
-  margin: 34px auto 0 auto;
+  margin: 28px auto 0 auto;
   width: 298px;
   height: 54px;
 }
