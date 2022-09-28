@@ -135,7 +135,7 @@ section {
 }
 
 .header__item a:hover {
-  color: #F9804B;
+  color: #f9804b;
 }
 
 .header__link {
@@ -148,7 +148,7 @@ section {
 }
 
 .header_about {
-  color: #F9804B !important;
+  color: #f9804b !important;
 }
 
 .header_about:hover {
@@ -166,7 +166,7 @@ section {
 }
 
 .donate__about {
-  color: #F9804B!important;
+  color: #f9804b !important;
 }
 
 .develops a {
@@ -916,7 +916,7 @@ button:hover {
 }
 
 .choice__animal h2 {
-  padding-top: 40px;;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -989,13 +989,13 @@ button:hover {
 }
 
 .choise__sum {
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 26px;
-line-height: 140%;
-text-transform: uppercase;
-color: #333B41;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333b41;
 }
 
 .amount {
@@ -1012,82 +1012,80 @@ color: #333B41;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  }
-  
-  .radio__buttons__container__2 {
-    display:block;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #333B41;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    margin-left: 12px;
-    cursor: pointer;
-    width 100px;
-    height:50px;
-  
-  }
-  
-  .radio__buttons__container__2 input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-     
-  }
-  
-  .mark__check__2:after {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      top: -16px;
-      left: -17px;
-      border: 2px #FE9013 solid;
-      border-radius: 50%;
-      opacity: 0;
-      }
-  
-  .mark__check__2:before {
-      content: '';
-      position: absolute;
-      width: 23px;
-      height: 23px;
-      top: -7.5px;
-      left: -8.5px;
-      border: 2px #FE9013 solid;
-      border-radius: 50%;
-      transition: all 300ms ease-in;
-      opacity: 0;
-      }
-      
-      .mark__check__2 {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: #FFEE2E;
-      left: 50%;
-      top: 0;
-      margin-left: -15px;
-      margin-top: 8px;
-      border-radius: 50%;
-      transition: all 300ms ease-in;
-  }
-      
-  .radio__buttons__container__2 input:checked ~ .mark__check__2 {
-    background-color: #4B9200;
-  }
-  
-  .radio__buttons__container__2 input ~ .mark__check__2:after {
+}
+
+.radio__buttons__container__2 {
+  display: block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  cursor: pointer;
+  width: 0px;
+  height: 50px;
+}
+
+.radio__buttons__container__2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mark__check__2:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -16px;
+  left: -17px;
+  border: 2px #fe9013 solid;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.mark__check__2:before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: -7.5px;
+  left: -8.5px;
+  border: 2px #fe9013 solid;
+  border-radius: 50%;
+  transition: all 300ms ease-in;
+  opacity: 0;
+}
+
+.mark__check__2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffee2e;
+  left: 50%;
+  top: 0;
+  margin-left: -15px;
+  margin-top: 8px;
+  border-radius: 50%;
+  transition: all 300ms ease-in;
+}
+
+.radio__buttons__container__2 input:checked ~ .mark__check__2 {
+  background-color: #4b9200;
+}
+
+.radio__buttons__container__2 input ~ .mark__check__2:after {
   background: none;
-  }
-  
-  .main__wrapper__2 {
-  display:flex;
-  flex-direction:column;
+}
+
+.main__wrapper__2 {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 976px;
   height: 27px;
@@ -1095,32 +1093,32 @@ color: #333B41;
   top: 0px;
   background: #404950;
   border-radius: 2px;
-  }
-  
-  .line__radio__2 {
-  position:absolute;
+}
+
+.line__radio__2 {
+  position: absolute;
   width: 915px;
   height: 2px;
   left: 30px;
   top: 12px;
-  background: #72828E;
-  }
-  
-  .mark__check__start__2 {
+  background: #72828e;
+}
+
+.mark__check__start__2 {
   transform: translate(10px, 0px);
-  }
-  
-  .mark__check__finish__2 {
+}
+
+.mark__check__finish__2 {
   transform: translate(-2px, 0px);
-  }
-  
-  .input__donate__2:checked + .mark__check__2:before {
-      opacity: 1;
-  }
-  
-  .input__donate__2:checked + .mark__check__2:after {
-      opacity: 1;
-  }
+}
+
+.input__donate__2:checked + .mark__check__2:before {
+  opacity: 1;
+}
+
+.input__donate__2:checked + .mark__check__2:after {
+  opacity: 1;
+}
 
 .donat__input {
   display: block;
@@ -1166,51 +1164,51 @@ input[type="number"] {
   max-width: 250px;
   padding-top: 27px;
   padding-left: 27px;
-  }
-  
-  .radio__buttons__container {
-    display:block;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #333B41;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 0px;
-    margin-right: 32px;
-    cursor: pointer;
-  }
-  
-  .radio__buttons__container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .mark__check {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    border:1px solid #FE9013;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-  }
-  
-  .radio__buttons__container input:checked ~ .mark__check {
-    background-color: #4B9200;
-    border:1px solid #4B9200;
-  }
-  
-  .mark__check:after {
-    content: "";
-    border: 2px solid green;
-    position: absolute;
-    display: none;
-  }  
+}
+
+.radio__buttons__container {
+  display: block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0px;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.radio__buttons__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mark__check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #fe9013;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.radio__buttons__container input:checked ~ .mark__check {
+  background-color: #4b9200;
+  border: 1px solid #4b9200;
+}
+
+.mark__check:after {
+  content: "";
+  border: 2px solid green;
+  position: absolute;
+  display: none;
+}
 
 .button__donats {
   display: block;
@@ -1284,4 +1282,14 @@ input[type="number"] {
   border-radius: 5px;
   background: #f1f3f2;
   margin-left: 5px;
+}
+
+#submitInitial__donats:hover {
+  color: orange;
+  border: 1px solid orange;
+}
+
+#submitInitial__donats:active {
+  color: #4b9200;
+  border: #4b9200;
 }
