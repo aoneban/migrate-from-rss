@@ -1114,6 +1114,16 @@ input[type="number"] {
   margin-left: 5px;
 }
 
+#submitEmail:hover {
+  color: orange;
+  border: 1px solid  orange;
+}
+
+#submitEmail:active {
+  color: #4b9200;
+  border: #4b9200;
+}
+
 #submitInitial__donats {
   width: 129px;
   height: 42px;
