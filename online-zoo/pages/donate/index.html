@@ -102,10 +102,16 @@
             />
             <img src="../../assets/icons/dollar.svg" alt="dollar" />
           </div>
-          <div class="checkbokses">
-            <img src="../../assets/icons/montly.svg" alt="" />
-            <img src="../../assets/icons/once.svg" alt="" />
-          </div>
+            <div class="radio__buttons__wrapper">
+              <label class="radio__buttons__container">Montly
+                <input type="radio" name="radio">
+                <span class="mark__check"></span>
+              </label>
+              <label class="radio__buttons__container">Once
+                <input type="radio" checked="checked" name="radio">
+                <span class="mark__check"></span>
+              </label>
+              </div>
           <button type="button" class="button__donats">
             Feed a friend now
           </button>
@@ -122,7 +128,7 @@
             </a>
           </div>
           <button
-            onclick="document.location='/pages/main/donats.html'"
+            onclick="document.location='./index.html'"
             type="button"
             class="button button__footer"
           >
