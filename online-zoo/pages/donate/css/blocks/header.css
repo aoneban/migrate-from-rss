@@ -1,0 +1,138 @@
+.header__logo {
+  padding-top: 16px;
+  padding-left: -4px;
+}
+
+.header {
+  display: block;
+  overflow: hidden;
+}
+
+.header__wrapper {
+  backdrop-filter: blur(2px);
+  background: #000000;
+  height: 80px;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  flex-direction: row;
+  margin-left: -295px;
+  padding-top: 6px;
+  flex-wrap: ;
+}
+
+.header__item a:hover {
+  color: #f9804b;
+}
+
+.header__link {
+  font-weight: 500;
+}
+
+.header__item {
+  margin-right: 62px;
+  list-style: none;
+}
+
+.header_about {
+  color: #f9804b !important;
+}
+
+.header_about:hover {
+  color: #ffffff !important;
+}
+
+.header__item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.css-adaptive {
+  display: block;
+  height: auto;
+  max-width: 130vw;
+}
+.introductory {
+    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  
+  .introductory p:first-child {
+    padding-top: 40px;
+    padding-left: 4px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    color: #ffffff;
+  }
+  
+  .donat_description {
+    font-weight: 500;
+    font-style: normal;
+    line-height: 140%;
+    color: #ffffff;
+  }
+  
+  .introductory p:last-child {
+    color: #fe9013;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    padding: 50px 0 60px 10px;
+  }
+
+@media (max-width: 1300px) {
+  .css-adaptive {
+    max-width: 160vw;
+    position: relative;
+    right: 173px;
+  }
+  .header__logo {
+    padding-top: 16px;
+    padding-left: 31px;
+  }
+  .header__list {
+    margin-left: -137px;
+  }
+  .header__map {
+    margin-left: -2px;
+    position: relative;
+    left: -11px;
+  }
+  .header__zoos {
+    margin-left: -2px;
+    position: relative;
+    left: -25px;
+  }
+  .header__donate {
+    position: relative;
+    left: -39px;
+  }
+  .header__contact {
+    position: relative;
+    left: -52px;
+  }
+  .develops {
+    position: relative;
+    left: -54px;
+    top: 2px;
+  }
+  .introductory p:first-child {
+    padding-top: 45px;
+    padding-left: 31px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    padding-right: 160px;
+}
+}

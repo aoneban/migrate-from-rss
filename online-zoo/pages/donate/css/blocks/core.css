@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 1600px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    color: #333b41;
+    background-color: white;
+  }
+  
+  h1 {
+    display: none;
+  }
+  
+  h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #fe9013;
+  }
+  
+  h3 {
+    display: block;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #333b41;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 0 0 14px;
+  }
