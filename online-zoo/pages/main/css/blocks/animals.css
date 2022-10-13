@@ -1,0 +1,362 @@
+.animals {
+  position: relative;
+  margin-top: 176px;
+  overflow: hidden;
+}
+
+#carousel {
+  transition: 1s;
+}
+
+.add {
+  display: block;
+  transform: scale(1) translate(-51%, 0%);
+  transition: 1s;
+}
+
+.add2 {
+  display: block;
+  transform: scale(1) translate(0%, 0%);
+  transition: 1s;
+}
+
+
+.palm__left__small,
+.palm__left__small_2,
+.palm__left__small_5 {
+  display: none;
+}
+
+.animals-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 2349px;
+  overflow: hidden;
+}
+
+.animal {
+  position: relative;
+  border: 1px solid #fa6f32;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  max-width: 32%;
+}
+
+.animal__1 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.desk__food {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.desk__icon img {
+  margin: 10px 10px 0 0;
+}
+
+.animal__names {
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 8px 0 0 16px;
+}
+
+.description {
+  font-weight: 300;
+  margin-left: 16px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.animal:last-child {
+  margin-right: 0;
+}
+
+.container-over {
+  position: relative;
+  width: 100%;
+}
+
+.container-over:hover .over {
+  height: 100%;
+  cursor: pointer;
+}
+
+.images__animals {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  opacity: 0.4;
+  transition: 0.5s ease;
+}
+
+.text__over {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.arrow__ellipsis {
+  display: block;
+  position: relative;
+}
+
+.ellips_right {
+  position: absolute;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  right: 121px;
+  top: -697px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+
+.ellips_right:hover {
+  background: linear-gradient(113.96deg, #df622d 1.49%, #f0850a 101.44%);
+}
+
+.arrow__right {
+  display: block;
+  position: relative;
+}
+
+.arrow__right img {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.ellips_left {
+  position: absolute;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  left: 139px;
+  top: -696px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+
+.ellips_left img {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.ellips_left:hover {
+  background: linear-gradient(113.96deg, #df622d 1.49%, #f0850a 101.44%);
+}
+
+.flower__palm {
+  display: block;
+  position: relative;
+}
+
+.flower__palm__right {
+  display: block;
+  position: relative;
+}
+
+.palm__right__2 {
+  position: relative;
+  height: auto;
+}
+
+.button-choose {
+  display: block;
+  margin: 63px auto 95px auto;
+  width: 298px;
+  height: 54px;
+  background: #fe9013;
+  border-radius: 25px;
+}
+
+.central {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: -4px;
+  margin-top: -28.5%;
+}
+
+@media (max-width: 1300px) {
+  .animal {
+    max-width: 15%;
+    margin-bottom: 90px;
+  }
+  .animals {
+    margin-top: 146px;
+  }
+  .animals-wrap {
+    justify-content: space-evenly;
+    width: 2000px;
+    margin-left: 4px;
+  }
+  .ellips_left {
+    left: 355px;
+    top: -825px;
+  }
+  .ellips_right {
+    right: 350px;
+    top: -825px;
+  }
+  .palm__left {
+    display: none;
+  }
+  .palm__left__small {
+    display: block;
+  }
+  .palm__right__2 {
+    max-width: 25vw;
+  }
+  .button-choose {
+    margin-bottom: 185px;
+    position: relative;
+    bottom: 36px;
+  }
+}
+
+@media (max-width: 840px) {
+  .animals-wrap {
+    justify-content: space-around;
+    max-width: 1300px;
+    margin-top: 0;
+  }
+  .animal {
+    max-width: 22%;
+    margin-bottom: 93px;
+  }
+  .animals {
+    margin-top: 66px;
+  }
+  .animal-5,
+  .animal-6,
+  .animal-11,
+  .animal-12{
+    display: none;
+  }
+  .ellips_left {
+    left: 244px;
+    top: -589px;
+  }
+  .ellips_right {
+    right: 242px;
+    top: -589px;
+  }
+  .desk__food {
+    margin-bottom: -7px;
+  }
+  .desk__text {
+    position: relative;
+    top: 0px;
+    left: -10px;
+    font-size: 0.8em;
+  }
+  .description {
+    font-size: 0.9em;
+  }
+  .desk__icon img {
+    margin: 10px 10px 0 0;
+    position: relative;
+    top: -4px;
+    left: 4px;
+    width: 5vw;
+  }
+  .button-choose {
+    margin-bottom: -18px;
+    position: relative;
+    bottom: 95px;
+  }
+  .central {
+    margin-bottom: -4px;
+    margin-top: -31%;
+  }
+  .palm__left__small_2 {
+    display: block;
+  }
+  .palm__left__small {
+    display: none;
+  }
+  .central {
+    margin-bottom: 6px;
+    margin-top: -31%;
+  }
+  .flower__palm {
+    top: 7px;
+  }
+  .flower__palm__right {
+    top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .animals {
+    margin-top: 50px;
+  }
+  .animal {
+    max-width: 90%;
+    margin-bottom: 24px;
+    height: 100%;
+  }
+  .ellips_left {
+    display: none;
+  }
+  .ellips_right {
+    display: none;
+  }
+  .animals-wrap {
+    justify-content: space-around;
+    margin-top: -7px;
+    position: relative;
+    right: 8px;
+    bottom: 9px;
+  }
+  .desk__food {
+    margin-bottom: 5px;
+  }
+  .desk__icon img {
+    width: 7vw;
+  }
+  .button-choose {
+    bottom: 81px;
+  }
+  .palm__left__small_2 {
+    width: 15vw;
+  }
+  .palm__right__2 {
+    position: relative;
+    right: -13px;
+  }
+  .palm__left__small_2 {
+    display: none;
+  }
+  .palm__left__small_5 {
+    display: block;
+  }
+}

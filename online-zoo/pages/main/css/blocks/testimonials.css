@@ -1,0 +1,384 @@
+.testimonials {
+  max-width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+input[type="range"] {
+  display: block;
+  width: 600px;
+  height: 7px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::slider-thumb {
+  appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.opinions__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 3223px;
+  position: relative;
+  left:0;
+  transition: all ease 1s;
+}
+
+.opinion {
+  position: relative;
+  margin-right: 21px;
+  margin-left: 10px;
+  border-radius: 20px;
+  padding: 0 16px;
+  background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
+}
+
+.opinion:last-child {
+  margin-right: 0px;
+}
+
+.opinion::before {
+  content: "";
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  position: absolute;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );
+  z-index: -1;
+}
+
+.testimonials h3 {
+  margin: 140px 0 47px;
+}
+
+.user__logo {
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-right: 10px;
+  position: relative;
+  top: -6px;
+  left: -5px;
+}
+
+.user__name {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #000000;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.user__address {
+  font-weight: 300;
+  font-size: 15px;
+  color: #bdbdbd;
+  line-height: 120%;
+}
+
+.user__text {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #767474;
+  line-height: 120%;
+  padding-bottom: 19px;
+}
+
+.scroll_wrap {
+  display: block;
+}
+
+.scroll__main {
+  position: relative;
+  width: 599px;
+  height: 8px;
+  top: 24px;
+  margin: 0 auto;
+}
+
+.button__scroll {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 115.19px;
+  height: 6px;
+  background: #fe9013;
+  border-radius: 5px;
+}
+
+.button__scroll:hover {
+  background: #f9804b;
+  cursor: pointer;
+}
+
+.scroll {
+  display: block;
+  margin: 21px auto 0 auto;
+}
+
+.button__testimonials {
+  display: block;
+  margin-top: 51px;
+  position: relative;
+  font-weight: 500;
+  height: 54px;
+  width: 298px;
+  border-radius: 5px;
+  margin-bottom: 180px;
+}
+
+.palm_right {
+  display: block;
+  position: relative;
+}
+
+.palm_right img {
+  position: absolute;
+  top: -294px;
+  right: 0;
+  height: auto;
+  width: calc(23% - 110px);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: 0 auto;
+  display: block;
+  background: #bbb;
+  width: 1%;
+  max-width: 600px;
+  height: 250px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#caption {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #000;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .testimonials {
+    max-width: 960px;
+  }
+  .testimonials h3 {
+    margin: 95px 0 29px;
+    position: relative;
+    left: -7px;
+  }
+  .opinion:last-child {
+    display: none;
+  }
+  .opinion {
+    position: relative;
+    border-radius: 20px;
+    padding: 0 16px;
+    background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
+    max-width: 29%;
+  }
+  .opinion:first-child {
+    position: relative;
+  }
+  .user__text {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #767474;
+    padding-bottom: 38px;
+  }
+  .scroll__main {
+    width: 397px;
+    left: calc(54.5% - 250px - 0.5px);
+  }
+  .button__scroll {
+    width: 80.19px;
+  }
+  .button__testimonials {
+    margin-top: 36px;
+    position: relative;
+    top: 40px;
+    left: 29px;
+  }
+  .palm_right img {
+    top: -239px;
+    width: calc(31% - 110px);
+  }
+}
+
+@media (max-width: 840px) {
+  #myRange {
+    display: none;
+  }
+  .opinion-add {
+    display: none;
+  }
+  .testimonials h3 {
+    margin: 54px 0 29px;
+  }
+  .long-text {
+    display: none;
+  }
+  .opinions__wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 640px;
+    left: 5px;
+  }
+  .opinion {
+    max-width: 93%;
+    margin-bottom: 15px;
+  }
+  .opinion:first-child {
+    position: relative;
+    left: 0px;
+  }
+  .user__text {
+    padding-bottom: 10px;
+  }
+  .user__logo {
+    margin-top: 15px;
+    margin-right: 5px;
+    position: relative;
+    right: 5px;
+    top: -1px;
+  }
+  .scroll_wrap {
+    display: none;
+  }
+  .button__testimonials {
+    margin-top: 36px;
+    position: relative;
+    width: 240px;
+    height: 54px;
+    left: calc(50% - 240px / 2);
+    top: -9px;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: 5px;
+  }
+  .palm_right img {
+    width: calc(35% - 110px);
+  }
+}
+
+@media (max-width: 420px) {
+  .testimonials h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #333b41;
+    margin-top: 23px;
+  }
+  .short-text {
+    display: none;
+  }
+  .user__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #4f4f4f;
+  }
+  .opinions__wrapper {
+    left: 5px;
+    top: -14px;
+  }
+  .user__name {
+    position: relative;
+    right: 5px;
+  }
+  .button__testimonials {
+    position: relative;
+    top: -25px;
+  }
+}

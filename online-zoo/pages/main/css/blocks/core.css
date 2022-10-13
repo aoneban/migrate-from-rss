@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: #333b41;
+  background-color: white;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 120%;
+  color: #333B41;
+}
+
+h3 {
+  display: block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  color: #333b41;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 0 0 14px;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 500;
+  width: 19%;
+  height: 7%;
+  color: #ffffff;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+}
+
+button:hover {
+  background: linear-gradient(113.96deg, #c74a14 1.49%, #da7604 101.44%);
+}/*# sourceMappingURL=core.css.map */

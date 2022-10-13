@@ -1,0 +1,223 @@
+.backstage-wrapper {
+  position: relative;
+  display: block;
+}
+
+.flower-mini {
+  display: none;
+}
+
+.grid-backstage-main {
+  display: grid;
+  grid-template-columns: 6fr;
+  max-width: 73.4%;
+  margin: 0 auto;
+}
+
+.grid-backstage-1 {
+  margin: 69px auto 0 auto;
+  display: grid;
+  background: #fff;
+  grid-template-columns: 3fr 3fr;
+  grid-column: 1/2;
+}
+
+.content-left {
+  text-align: right;
+  padding-left: 7px;
+}
+
+.content-left .man-in-hat {
+  width: 106%;
+}
+
+.content-right {
+  position: relative;
+  margin-left: 116px;
+}
+
+.content-right .first-par {
+  padding-top: 22px;
+  padding-left: 7px;
+}
+
+.content-right .last-par {
+  padding-left: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.content-right .about-works {
+  display: block;
+  width: 217px;
+  height: 29px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333b41;
+  margin: 57px 0 34px 7px;
+}
+
+.content-right .wilderness-world {
+  text-align: center;
+}
+
+.content-right .wilderness-world span {
+  padding-right: 75px;
+}
+
+.flower {
+  position: absolute;
+  right: 0px;
+  top: -50px;
+  width: 12%;
+}
+
+@media (max-width: 1300px) {
+  .flower {
+    display: none;
+  }
+  .content-left {
+    width: 440px;
+    height: 405px;
+  }
+
+  .man-in-hat {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+  }
+  .grid-backstage-main {
+    display: grid;
+    grid-template-columns: 6fr;
+    max-width: 98%;
+    margin: 0 auto;
+    position: relative;
+    top: 58px;
+    left: 10px;
+  }
+  .content-right {
+    position: relative;
+    margin-left: 0px;
+  }
+  .wilderness-world {
+    font-size: 4.8vw;
+    position: relative;
+    right: 13px;
+    bottom: 10px;
+  }
+
+  .first-par,
+  .about-works {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .last-par {
+    padding-right: 28px;
+    position: relative;
+    bottom: 11px;
+    right: 3px;
+  }
+  .content-right .last-par {
+    font-size:13px;
+  }
+  .content-right .about-works {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .content-left {
+    display: none;
+  }
+  .flower {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 26px;
+    width: 19vw;
+    height: 100%;
+  }
+  .grid-backstage-1 {
+    margin: 69px auto 0 auto;
+    display: grid;
+    background: #fff;
+    grid-template-columns: 4fr 1fr;
+    grid-column: 1/2;
+  }
+  .wilderness-world {
+    font-size: 7.5vw;
+    position: relative;
+    right: 19px;
+    bottom: 41px;
+  }
+  .first-par {
+    position: relative;
+    bottom: 40px;
+    right: 5px;
+  }
+
+  .about-works {
+    position: relative;
+    bottom: 62px;
+    right: 0px;
+  }
+
+  .last-par {
+    padding-right: 28px;
+    position: relative;
+    bottom: 79px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .content-right {
+    top: 53px;
+  }
+  .flower {
+    display: none;
+  }
+  .flower-mini {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    width: 12vw;
+    height: auto;
+  }
+  .content-right .wilderness-world {
+    position: relative;
+    text-align: left;
+    padding-top: -26px;
+    left: -3px;
+    top: -43px;
+  }
+  .content-right .first-par {
+    padding-top: 7px;
+    padding-left: 2px;
+  }
+  .wilderness-world > span {
+    white-space: nowrap;
+  }
+  .about-works {
+    bottom: 72px;
+    right: 8px;
+  }
+  .grid-backstage-1 {
+    margin: 69px auto 0 auto;
+    grid-template-columns: 12fr 1fr;
+  }
+  .last-par {
+    padding-right: 0;
+    position: relative;
+    bottom: 97px;
+    left: -11px;
+  }
+}
