@@ -7,6 +7,10 @@ section {
   margin: 0 auto;
 }
 
+.dollar-gold {
+  display: none;
+}
+
 .bg__wrapper {
   display: block;
   position: relative;
