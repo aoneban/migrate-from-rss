@@ -65,41 +65,57 @@ document.getElementById("myRange").addEventListener("input", () => {
   }
 });
 
-//modal
-let modal = document.getElementById("myModal");
-newModal();
-function newModal() {
+//modal testimonials//
+
+(function () {
   let modal = document.getElementById("myModal");
-  const nodeList = Array.from(document.querySelectorAll(".user__text"));
+  let modalContent = document.getElementById("img01");
   let opinion = document.querySelectorAll(".opinion");
-  let userName = Array.from(document.querySelectorAll(".user__name"));
-  var modalImg = document.getElementById("img02");
-  var captionText = document.getElementById("caption");
-  if (screen < 650) {
+  let captionText = document.getElementById("caption");
+  let close = document.querySelector(".close");
+
+  if (screen < 840) {
     opinion.forEach((el) => {
-      el.addEventListener("click", (e) => {
-        let num = 0;
-        modal.style.display = "block";
-        captionText.innerHTML = `
-        <p class="user__name">${userName[3].innerHTML}</p>
-        <img
-            id="img02"
-            src="../../assets/images/Vector.png"
-            alt="user_1"
-            class="user__logo"
-          />
-        <p>${nodeList[3].innerText}</p>
-        `;
-        console.log(u);
-      });
-    });
-    document.querySelector(".close").addEventListener("click", () => {
-      modal.style.display = "none";
+      el.addEventListener(
+        "click",
+        (e) => {
+          let name = e.currentTarget.querySelector(".user__name");
+          let address = e.currentTarget.querySelector(".user__address");
+          let img = e.currentTarget.querySelector(".user__logo");
+          let text = e.currentTarget.querySelector('.user__text .long-text')
+          let cloneText = text.cloneNode(true);
+          let cloneImg = img.cloneNode(true);
+          let cloneName = name.cloneNode(true);
+          let cloneAddress = address.cloneNode(true);
+          cloneImg.style.position = 'relative'
+          cloneImg.style.left = '20px'
+          cloneAddress.style.color = "#555";
+          cloneText.style.display = "block"
+          cloneText.style.color = "#555"
+          cloneText.style.marginTop = "15px"
+          console.log(text);
+          modalContent.appendChild(cloneImg);
+          modalContent.appendChild(cloneName);
+          modalContent.appendChild(cloneAddress);
+          modalContent.appendChild(cloneText);
+          modal.style.display = "block";
+          captionText.innerText = "testimonial";
+          captionText.style.color = "#ffffff";
+          modal.appendChild(captionText);
+          close.addEventListener("click", () => {
+            cloneText.remove()
+            cloneImg.remove();
+            cloneName.remove();
+            cloneAddress.remove();
+            modal.style.display = "none";
+          });
+        },
+      );
     });
   }
-}
+})();
 
-//modal-menu
+//burger-menu//
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
