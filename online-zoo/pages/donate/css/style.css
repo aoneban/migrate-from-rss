@@ -11,12 +11,12 @@ section {
   display: none;
 }
 
-.bg__wrapper {
+.bg-wrapper {
   display: block;
   position: relative;
 }
 
-.donate__about {
+.donate-about {
   color: #f9804b !important;
 }
 
@@ -25,7 +25,7 @@ section {
   text-decoration: none;
 }
 
-.bg__main {
+.bg-main {
   z-index: -1;
   position: relative;
   left: 0px;
@@ -44,7 +44,7 @@ button {
   border-radius: 25px;
 }
 
-.button__header {
+.button-header {
   position: absolute;
   left: calc(50% - 298px / 2 + 332px);
   top: 71%;
@@ -130,7 +130,7 @@ button:hover {
   color: #333b41;
 }
 
-.about__works {
+.about-works {
   display: block;
   width: 217px;
   height: 29px;
@@ -158,7 +158,7 @@ button:hover {
   margin-top: 180px;
 }
 
-.animals__wrap {
+.animals-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -184,7 +184,7 @@ button:hover {
   display: block;
 }
 
-.animal__1 {
+.animal-1 {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
@@ -194,18 +194,18 @@ button:hover {
   transform: scale(1.2);
 }
 
-.desk__food {
+.desk-food {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.desk__icon img {
+.desk-icon img {
   margin: 10px 10px 0 0;
 }
 
-.animal__names {
+.animal-names {
   font-weight: 500;
   columns: #000000;
   text-transform: uppercase;
@@ -237,7 +237,7 @@ button:hover {
   background: linear-gradient(113.96deg, #df622d 1.49%, #f0850a 101.44%);
 }
 
-.arrow__right {
+.arrow-right {
   display: block;
   position: relative;
 }
@@ -279,17 +279,17 @@ button:hover {
   border-radius: 25px;
 }
 
-.side__flowers {
+.side-flowers {
   display: block;
   position: relative;
 }
 
-.side__flowers__2 {
+.side-flowers-2 {
   display: block;
   position: relative;
 }
 
-.side__flowers img {
+.side-flowers img {
   position: absolute;
   width: 280px;
   height: 460px;
@@ -297,7 +297,7 @@ button:hover {
   top: -460px;
 }
 
-.flower__strelit img {
+.flower-strelit img {
   position: absolute;
   width: 368px;
   height: 275px;
@@ -305,7 +305,7 @@ button:hover {
   top: -275px;
 }
 
-.feed__instruction {
+.feed-instruction {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,7 +349,7 @@ button:hover {
   top: 791px;
 }
 
-.feed__wrapper {
+.feed-wrapper {
   display: block;
   margin: 0 auto;
   width: 1160px;
@@ -370,14 +370,14 @@ button:hover {
   padding: 30px;
 }
 
-.feed__doing {
+.feed-doing {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 20px;
 }
 
-.pick__and__feed {
+.pick-and-feed {
   display: block;
   padding: 45px 0 30px 20px;
   font-family: "Roboto";
@@ -390,7 +390,7 @@ button:hover {
   color: #fe9013;
 }
 
-.p__bold {
+.p-bold {
   display: block;
   padding-bottom: 40px;
   font-family: "Roboto";
@@ -402,7 +402,7 @@ button:hover {
   margin-right: 100px;
 }
 
-.small__bold {
+.small-bold {
   display: block;
   margin-left: 59px;
   font-family: "Roboto";
@@ -414,14 +414,14 @@ button:hover {
   padding-bottom: 10px;
 }
 
-.p__simple {
+.p-simple {
   display: block;
   margin-left: 99px;
   margin-right: 190px;
   padding-bottom: 60px;
 }
 
-.p__simple a {
+.p-simple a {
   text-decoration: none;
   color: #333b41;
 }
@@ -430,7 +430,7 @@ button:hover {
   border-bottom: 1px solid #fe9013;
 }
 
-.item__one {
+.item-one {
   display: flex;
   flex-direction: column;
   padding: 20px 29px 70px;
@@ -445,7 +445,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.opinions__wrapper {
+.opinions-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -484,7 +484,7 @@ button:hover {
   z-index: -1;
 }
 
-.user__logo {
+.user-logo {
   display: block;
   float: left;
   margin-top: 15px;
@@ -495,7 +495,7 @@ button:hover {
   margin: 140px 0 47px;
 }
 
-.user__name {
+.user-name {
   margin-top: 15px;
   font-size: 16px;
   color: #000000;
@@ -503,14 +503,14 @@ button:hover {
   font-weight: 400;
 }
 
-.user__address {
+.user-address {
   font-weight: 300;
   font-size: 15px;
   color: #bdbdbd;
   line-height: 120%;
 }
 
-.user__text {
+.user-text {
   margin-top: 10px;
   font-size: 15px;
   font-weight: 300;
@@ -528,7 +528,7 @@ button:hover {
   margin: 21px auto 0 auto;
 }
 
-.button__testimonials {
+.button-testimonials {
   display: block;
   margin-top: 31px;
   position: relative;
@@ -556,19 +556,19 @@ button:hover {
   margin-top: -10px;
 }
 
-.footer__wrapper {
+.footer-wrapper {
   display: block;
   margin: 0 auto;
   max-width: 1160px;
 }
 
-.footer__wrapper {
+.footer-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.menu__footer ul {
+.menu-footer ul {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -577,22 +577,22 @@ button:hover {
   list-style: none;
 }
 
-.menu__footer a {
+.menu-footer a {
   color: #eaf7fe;
   text-decoration: none;
   padding-left: 65px;
   font-size: 16px;
 }
 
-.menu__footer a:hover {
+.menu-footer a:hover {
   color: #f9804b;
 }
 
-.logo__footer {
+.logo-footer {
   margin-top: 41px;
 }
 
-.button__footer {
+.button-footer {
   width: 298px;
   height: 54px;
   border-radius: 5px;
@@ -674,7 +674,7 @@ button:hover {
   border: 1px solid #f9804b;
 }
 
-.button__submit {
+.button-submit {
   color: #4b9200;
   background: #f1f3f2;
   width: 129px;
@@ -684,12 +684,12 @@ button:hover {
   margin-left: 10px;
 }
 
-.developer__template {
+.developer-template {
   margin-top: 207px;
   margin-left: 140px;
 }
 
-.developer__template p {
+.developer-template p {
   font-weight: 100;
   color: #ffffff;
   padding: 8px 0;
@@ -697,7 +697,7 @@ button:hover {
 
 /*donations*/
 
-.information__wrapper {
+.information-wrapper {
   max-width: 1600px;
   padding-bottom: 180px;
   background: linear-gradient(
@@ -724,18 +724,18 @@ button:hover {
     );
 }
 
-.choice__animal {
+.choice-animal {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(2px);
   border-radius: 20px;
 }
 
-.choice__animal h2 {
+.choice-animal h2 {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-.choice__animal p {
+.choice-animal p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -746,7 +746,7 @@ button:hover {
   margin-bottom: 9px;
 }
 
-.choise__wrapper {
+.choise-wrapper {
   max-width: 976px;
   margin: 0 auto;
 }
@@ -759,7 +759,7 @@ button:hover {
   margin-top: 60px;
 }
 
-.item__2 {
+.item-2 {
   position: relative;
   padding: 20px 50px 0 10px;
   margin-right: 20px;
@@ -788,22 +788,22 @@ button:hover {
   color: #333b41;
 }
 
-.elem__1 {
+.elem-1 {
   position: absolute;
 }
 
-.sum__item {
+.sum-item {
   color: orange;
 }
 
-.list__sum {
+.list-sum {
   margin-top: 15px;
   width: 98%;
   display: flex;
   justify-content: space-between;
 }
 
-.choise__sum {
+.choise-sum {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -823,13 +823,13 @@ button:hover {
   color: #000000;
 }
 
-.radio__buttons__wrapper__2 {
+.radio-buttons-wrapper-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.radio__buttons__container__2 {
+.radio-buttons-container-2 {
   display: block;
   font-family: "Roboto";
   font-style: normal;
@@ -846,13 +846,13 @@ button:hover {
   height: 50px;
 }
 
-.radio__buttons__container__2 input {
+.radio-buttons-container-2 input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.mark__check__2:after {
+.mark-check-2:after {
   content: "";
   position: absolute;
   width: 40px;
@@ -864,7 +864,7 @@ button:hover {
   opacity: 0;
 }
 
-.mark__check__2:before {
+.mark-check-2:before {
   content: "";
   position: absolute;
   width: 23px;
@@ -877,7 +877,7 @@ button:hover {
   opacity: 0;
 }
 
-.mark__check__2 {
+.mark-check-2 {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -890,19 +890,19 @@ button:hover {
   transition: all 300ms ease-in;
 }
 
-.radio__buttons__container__2 input:checked ~ .mark__check__2 {
+.radio-buttons-container-2 input:checked ~ .mark-check-2 {
   background-color: #4b9200;
 }
 
-.radio__buttons__container__2 input ~ .mark__check__2:after {
+.radio-buttons-container-2 input ~ .mark-check-2:after {
   background: none;
 }
 
-.main__wrapper__2 {
+.main-wrapper-2 {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 976px;
+  max-width: 976px;
   height: 27px;
   left: 5px;
   top: 0px;
@@ -910,7 +910,7 @@ button:hover {
   border-radius: 2px;
 }
 
-.line__radio__2 {
+.line-radio-2 {
   position: absolute;
   width: 915px;
   height: 2px;
@@ -919,28 +919,28 @@ button:hover {
   background: #72828e;
 }
 
-.mark__check__start__2 {
+.mark-check-start-2 {
   transform: translate(10px, 0px);
 }
 
-.mark__check__finish__2 {
+.mark-check-finish-2 {
   transform: translate(-2px, 0px);
 }
 
-.input__donate__2:checked + .mark__check__2:before {
+.input-donate-2:checked + .mark-check-2:before {
   opacity: 1;
 }
 
-.input__donate__2:checked + .mark__check__2:after {
+.input-donate-2:checked + .mark-check-2:after {
   opacity: 1;
 }
 
-.donat__input {
+.donat-input {
   display: block;
   position: relative;
 }
 
-.donat__input input {
+.donat-input input {
   display: block;
   margin: 0 auto;
   margin-top: 50px;
@@ -965,13 +965,13 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.donat__input img {
+.donat-input img {
   position: absolute;
   top: 16px;
   right: 365px;
 }
 
-.radio__buttons__wrapper {
+.radio-buttons-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -981,7 +981,7 @@ input[type="number"] {
   padding-left: 27px;
 }
 
-.radio__buttons__container {
+.radio-buttons-container {
   display: block;
   font-family: "Roboto";
   font-style: normal;
@@ -996,13 +996,13 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.radio__buttons__container input {
+.radio-buttons-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.mark__check {
+.mark-check {
   position: absolute;
   top: 0;
   left: 0;
@@ -1013,26 +1013,26 @@ input[type="number"] {
   border-radius: 50%;
 }
 
-.radio__buttons__container input:checked ~ .mark__check {
+.radio-buttons-container input:checked ~ .mark-check {
   background-color: #4b9200;
   border: 1px solid #4b9200;
 }
 
-.mark__check:after {
+.mark-check:after {
   content: "";
   border: 2px solid green;
   position: absolute;
   display: none;
 }
 
-.button__donats {
+.button-donats {
   display: block;
   margin: 28px auto 0 auto;
   width: 298px;
   height: 54px;
 }
 
-.choice__animal p:last-child {
+.choice-animal p:last-child {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -1063,7 +1063,7 @@ input[type="number"] {
   border-color: #4b9200;
 }
 
-.column__3 {
+.column-3 {
   transform: translate(8px, 1px);
 }
 
@@ -1083,7 +1083,7 @@ input[type="number"] {
   margin-left: 5px;
 }
 
-#submitInitial__donats {
+#submitInitial-donats {
   width: 129px;
   height: 42px;
   font-family: "Roboto";
@@ -1099,12 +1099,12 @@ input[type="number"] {
   margin-left: 5px;
 }
 
-#submitInitial__donats:hover {
+#submitInitial-donats:hover {
   color: orange;
   border: 1px solid orange;
 }
 
-#submitInitial__donats:active {
+#submitInitial-donats:active {
   color: #4b9200;
   border: #4b9200;
 }

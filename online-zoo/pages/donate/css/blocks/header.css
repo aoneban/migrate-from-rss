@@ -1,4 +1,4 @@
-.header__logo {
+.header-logo {
   padding-top: 16px;
   padding-left: -4px;
 }
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.header__wrapper {
+.header-wrapper {
   backdrop-filter: blur(2px);
   background: #000000;
   height: 80px;
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.header__list {
+.header-list {
   display: flex;
   flex-direction: row;
   margin-left: -295px;
@@ -31,15 +31,15 @@
   flex-wrap: ;
 }
 
-.header__item a:hover {
+.header-item a:hover {
   color: #f9804b;
 }
 
-.header__link {
+.header-link {
   font-weight: 500;
 }
 
-.header__item {
+.header-item {
   margin-right: 62px;
   list-style: none;
 }
@@ -52,7 +52,7 @@
   color: #ffffff !important;
 }
 
-.header__item a {
+.header-item a {
   text-decoration: none;
   color: #ffffff;
 }
@@ -98,28 +98,28 @@
     position: relative;
     right: 173px;
   }
-  .header__logo {
+  .header-logo {
     padding-top: 16px;
     padding-left: 31px;
   }
-  .header__list {
+  .header-list {
     margin-left: -137px;
   }
-  .header__map {
+  .header-map {
     margin-left: -2px;
     position: relative;
     left: -11px;
   }
-  .header__zoos {
+  .header-zoos {
     margin-left: -2px;
     position: relative;
     left: -25px;
   }
-  .header__donate {
+  .header-donate {
     position: relative;
     left: -39px;
   }
-  .header__contact {
+  .header-contact {
     position: relative;
     left: -52px;
   }

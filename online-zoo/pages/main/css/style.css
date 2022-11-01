@@ -17,12 +17,12 @@ section {
   margin-top: 60px;
 }
 
-.side__flowers {
+.side-flowers {
   display: block;
   position: relative;
 }
 
-.side__flowers__2 {
+.side-flowers-2 {
   display: block;
   position: relative;
 }
@@ -33,7 +33,7 @@ section {
 
 
 /*donations*/
-.information__wrapper {
+.information-wrapper {
   max-width: 1600px;
   padding-bottom: 180px;
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
@@ -68,19 +68,19 @@ section {
   padding: 40px 0 60px 0;
 }
 
-.choice__animal {
+.choice-animal {
   background: rgba(255, 255, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 20px;
 }
 
-.choice__animal h2 {
+.choice-animal h2 {
   padding-top: 40px;
   padding-bottom: 30px;
 }
 
-.choice__animal p {
+.choice-animal p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -89,7 +89,7 @@ section {
   color: #333b41;
 }
 
-.choise__wrapper {
+.choise-wrapper {
   max-width: 976px;
   margin: 0 auto;
 }
@@ -102,7 +102,7 @@ section {
   margin-top: 60px;
 }
 
-.item__2 {
+.item-2 {
   position: relative;
   padding: 10px 80px 0 30px;
 }
@@ -130,7 +130,7 @@ section {
   color: #333b41;
 }
 
-.elem__1 {
+.elem-1 {
   position: absolute;
 }
 
@@ -154,12 +154,12 @@ section {
   padding-top: 5px;
 }
 
-.donat__input {
+.donat-input {
   display: block;
   position: relative;
 }
 
-.donat__input input {
+.donat-input input {
   display: block;
   margin: 0 auto;
   margin-top: 50px;
@@ -184,7 +184,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.donat__input img {
+.donat-input img {
   position: absolute;
   top: 16px;
   right: 365px;
@@ -206,14 +206,14 @@ input[type=number] {
   margin: 0 auto;
 }
 
-.button__donats {
+.button-donats {
   display: block;
   margin: 34px auto 0 auto;
   width: 298px;
   height: 54px;
 }
 
-.choice__animal p:last-child {
+.choice-animal p:last-child {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -244,7 +244,7 @@ input[type=number] {
   border-color: #4b9200;
 }
 
-.column__3 {
+.column-3 {
   transform: translate(8px, 1px);
 }
 
@@ -274,7 +274,7 @@ input[type=number] {
   border: #4b9200;
 }
 
-#submitInitial__donats {
+#submitInitial-donats {
   width: 129px;
   height: 42px;
   font-family: "Roboto";
