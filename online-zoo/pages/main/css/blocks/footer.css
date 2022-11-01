@@ -3,7 +3,7 @@
   height: 443px;
 }
 
-.user__logotip {
+.user-logotip {
   position: relative;
   top: -11px;
   left: -8px;
@@ -13,7 +13,7 @@
   display: none;
 }
 
-.footer .footer__wrapper {
+.footer .footer-wrapper {
   margin: -12px auto 0 auto;
   max-width: 1160px;
   display: flex;
@@ -22,7 +22,7 @@
   padding-top: 11px;
 }
 
-.menu__footer ul {
+.menu-footer ul {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -31,23 +31,23 @@
   list-style: none;
 }
 
-.menu__footer a {
+.menu-footer a {
   color: #eaf7fe;
   text-decoration: none;
   padding-left: 10px;
   font-size: 16px;
 }
 
-.menu__footer a:hover {
+.menu-footer a:hover {
   color: #f9804b;
 }
 
-.logo__footer {
+.logo-footer {
   margin-top: 41px;
   margin-left: 8px;
 }
 
-.button__footer {
+.button-footer {
   width: 298px;
   height: 54px;
   border-radius: 5px;
@@ -138,7 +138,7 @@
   border: 1px solid #f9804b;
 }
 
-.button__submit {
+.button-submit {
   color: #4b9200;
   background: #f1f3f2;
   width: 129px;
@@ -148,12 +148,12 @@
   margin-left: 10px;
 }
 
-.developer__template {
+.developer-template {
   margin-top: 195px;
   margin-left: 140px;
 }
 
-.developer__template p {
+.developer-template p {
   font-weight: 100;
   color: #ffffff;
   padding: 8px 0;
@@ -180,11 +180,11 @@
 }
 
 @media (max-width: 1300px) {
-  .logo__footer {
+  .logo-footer {
     margin-top: 41px;
     margin-left: 42px;
   }
-  .button__footer {
+  .button-footer {
     position: relative;
     left: 34px;
   }
@@ -206,7 +206,7 @@
     left: -57px;
     bottom: 3px;
   }
-  .developer__template {
+  .developer-template {
     margin-top: 205px;
     margin-left: 101px;
     padding-left: 11px;
@@ -246,18 +246,18 @@
   .facebook p {
     display: none;
   }
-  .logo__footer {
+  .logo-footer {
     margin-top: 10px;
     margin-left: 21px;
   }
-  .button__footer {
+  .button-footer {
     margin-bottom: -47px;
     position: relative;
     left: 10px;
     padding-bottom: -2px;
     bottom: 33px;
   }
-  .menu__footer ul {
+  .menu-footer ul {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -269,7 +269,7 @@
   .social {
     margin-top: 0;
   }
-  .column__1 {
+  .column-1 {
     display: block;
     position: relative;
   }
@@ -279,7 +279,7 @@
     right: -312px;
     top: 13px;
   }
-  .developer__template {
+  .developer-template {
     margin-top: 205px;
     margin-left: -177px;
     padding-left: 47px;
@@ -308,7 +308,7 @@
 }
 
 @media (max-width: 420px) {
-  .user__logo {
+  .user-logo {
     display: none;
   }
   .petstory-online-footer {
@@ -321,7 +321,7 @@
     top: 74px;
     display: flex;
   }
-  .button__footer {
+  .button-footer {
     position: relative;
     left: -1px;
     padding-bottom: -2px;
@@ -332,15 +332,15 @@
     height: 335px;
     padding-bottom: -2px;
   }
-  .logo__footer {
+  .logo-footer {
     position: relative;
     top: 13px;
     left: 76px;
   }
-  .user__name {
+  .user-name {
     right: -35px;
   }
-  .user__address {
+  .user-address {
     margin-left: 36px;
   }
   .facebook {
@@ -349,10 +349,10 @@
     position: relative;
     left: 39px;
   }
-  .menu__footer ul {
+  .menu-footer ul {
     top: 293px;
   }
-  .developer__template {
+  .developer-template {
     left: -331px;
     top: -2px;
   }

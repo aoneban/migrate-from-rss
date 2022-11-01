@@ -13,7 +13,7 @@ prev.addEventListener("click", () => {
 
 //testimonials
 let screen = document.documentElement.clientWidth;
-let myscroll = document.querySelector(".opinions__wrapper");
+let myscroll = document.querySelector(".opinions-wrapper");
 console.log(screen);
 let offset0 = 0;
 let offset1 = 295;
@@ -79,10 +79,10 @@ document.getElementById("myRange").addEventListener("input", () => {
       el.addEventListener(
         "click",
         (e) => {
-          let name = e.currentTarget.querySelector(".user__name");
-          let address = e.currentTarget.querySelector(".user__address");
-          let img = e.currentTarget.querySelector(".user__logo");
-          let text = e.currentTarget.querySelector('.user__text .long-text')
+          let name = e.currentTarget.querySelector(".user-name");
+          let address = e.currentTarget.querySelector(".user-address");
+          let img = e.currentTarget.querySelector(".user-logo");
+          let text = e.currentTarget.querySelector('.user-text .long-text')
           let cloneText = text.cloneNode(true);
           let cloneImg = img.cloneNode(true);
           let cloneName = name.cloneNode(true);

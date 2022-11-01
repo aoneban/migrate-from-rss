@@ -47,7 +47,7 @@
   color: #ffee2e;
 }
 
-.button__header {
+.button-header {
   position: absolute;
   left: calc(50% - 144px + 332px);
   top: 71%;
@@ -169,7 +169,7 @@ input[type=range]:focus::-ms-fill-upper {
     top: 48px;
     font-size: 5.4em !important;
   }
-  .button__header {
+  .button-header {
     left: calc(38% - 144px + 332px);
     top: 83%;
     width: 29%;
@@ -199,7 +199,7 @@ input[type=range]:focus::-ms-fill-upper {
     position: relative;
     right: 5px;
   }
-  .button__header {
+  .button-header {
     left: calc(-29% - 125px + 332px);
     top: 79%;
     width: 46%;
@@ -224,7 +224,7 @@ input[type=range]:focus::-ms-fill-upper {
     text-align: center;
     width: 100%;
   }
-  .button__header {
+  .button-header {
     left: calc(-60% - 125px + 332px);
     top: 133%;
     width: 92%;

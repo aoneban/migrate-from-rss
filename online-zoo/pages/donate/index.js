@@ -1,5 +1,7 @@
-let inputs = document.querySelectorAll(".input__donate__2");
-const sum = document.querySelectorAll(".choise__sum");
+//create feed a friend
+
+const inputs = document.querySelectorAll(".input-donate-2");
+const sum = document.querySelectorAll(".choise-sum");
 const dollarsBlack = document.querySelectorAll('.dollar-black')
 const dollarsGold = document.querySelectorAll('.dollar-gold')
 sum[2].style.color = "orange";
@@ -10,7 +12,7 @@ console.log(dollarsGold)
 inputs.forEach((el) => {
   el.addEventListener("input", (e) => {
     let newTarget = e.currentTarget.value;
-    document.querySelector(".anoteher__amount").value = newTarget;
+    document.querySelector(".anoteher-amount").value = newTarget;
     for (let i = 0; i < sum.length; i++) {
       if (sum[i].innerText == newTarget) {
         sum[i].style.color = "orange";
