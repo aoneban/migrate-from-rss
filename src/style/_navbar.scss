@@ -1,6 +1,7 @@
 .nav-bar {
-    max-width: 60%;
-    margin: 50px auto;
+  max-width: 70%;
+  margin: 20px auto;
+  ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,9 +9,14 @@
     background: $back2;
     border-radius: 4px;
     min-height: 35px;
-    a {
-        color: $text2;
-        text-decoration: none;
-        padding: 17px 15px;
-    }
+    padding: 20px 15px;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    color: $text2;
+    text-decoration: none;
+  }
 }
+
