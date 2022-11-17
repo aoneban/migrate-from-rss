@@ -1,0 +1,17 @@
+.main-wrapper {
+    max-width: 60%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    background: $back2;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.content-bird {
+    display: block;
+    h3 {
+        border-bottom: 1px solid $text2;
+        margin-bottom: 20px;
+    }
+}

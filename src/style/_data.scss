@@ -1,0 +1,35 @@
+.data-birds {
+    max-width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    .wrapper-birds {
+        background: $back2;
+        border-radius: 5px;
+        width: 48%;
+        ul li {
+            display: block;
+            list-style: none;
+            font-size: 26px;
+            padding: 10px 0 10px 45px;
+            border-bottom: 1px solid #111;
+            color: $text2;
+            cursor: pointer;
+            .dot {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $back;
+            }
+        }
+    }
+    .chouse-birds {
+        background: $back2;
+        border-radius: 5px;
+        width: 48%;
+        p {
+            color: $text2;
+            padding: 10px 0 0 10px;
+        }
+    }
+}
