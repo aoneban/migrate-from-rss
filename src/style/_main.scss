@@ -2,10 +2,18 @@
     max-width: 70%;
     margin: 30px auto;
     display: flex;
-    justify-content: space-around;
     background: $back2;
     padding: 25px;
     border-radius: 5px;
+}
+
+.main-wrapper > .img {
+    width: 15rem;
+    margin-left: 10px;
+}
+
+.main-wrapper > .content-bird {
+    flex: 50%;
 }
 
 .content-bird {
@@ -13,5 +21,6 @@
     h3 {
         border-bottom: 1px solid $text2;
         margin-bottom: 20px;
+        color: $text2;
     }
 }
