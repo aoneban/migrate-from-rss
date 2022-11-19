@@ -7,13 +7,18 @@
     background: $back2;
     border-radius: 5px;
     width: 48%;
+    overflow: hidden;
+    .wrapper-list {
+      width: 150%;
+    }
     ul li {
       display: block;
       list-style: none;
       font-size: 23px;
       padding: 10px 0 10px 30px;
-      border-bottom: 1px solid #111;
+      border-bottom: 1px solid $text2;
       color: $text2;
+      margin: 0;
       cursor: pointer;
       .dot {
         display: inline-block;
@@ -36,4 +41,6 @@
     }
   }
 }
+
+
 
