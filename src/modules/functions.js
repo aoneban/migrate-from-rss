@@ -60,3 +60,20 @@ export function generatePlayerWithSong() {
 </audio>`
   list.appendChild(audio)
 }
+
+// user's selection of a specific bird
+//функция выбора пользователем определенной птицы
+export function userChoise() {
+  const newArr = document.getElementsByClassName("data-birds");
+
+  for (let item of newArr) {
+    item.addEventListener("click", (e) => {
+      if (e.target !== e.currentTarget) {
+        e.stopPropagation();
+      } else {
+        alert("hi");
+        console.log(e.currentTarget.innerText);
+      }
+    });
+  }
+}

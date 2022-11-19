@@ -8,6 +8,7 @@ import {
   randomInteger,
   randomSongGenerator,
   generatePlayerWithSong,
+  userChoise
 } from "./modules/functions";
 
 const imgWrap = document.querySelector(".img");
@@ -18,17 +19,4 @@ imgWrap.append(img);
 
 setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong();
-
-const newArr = document.getElementsByClassName("data-birds");
-console.log(newArr);
-
-for (let item of newArr) {
-  item.addEventListener("click", (e) => {
-    if (e.target !== e.currentTarget) {
-      e.stopPropagation();
-    } else {
-      alert('hi');
-      console.log(e.currentTarget.innerText)
-    }
-  });
-}
+userChoise()
