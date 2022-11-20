@@ -2,6 +2,7 @@ import "./index.html";
 import "./index.scss";
 import code from "./img/code.jpg";
 import birdsData from "./modules/data";
+
 import {
   birdsNames,
   setBirds,
@@ -9,8 +10,9 @@ import {
   randomSongGenerator,
   generatePlayerWithSong,
   userSelect,
-  birdsArray
-} from "./modules/functions";
+  birdsArray,
+  birdsNewImage,
+  } from "./modules/functions";
 
 const imgWrap = document.querySelector(".img");
 const img = new Image();
@@ -21,9 +23,6 @@ imgWrap.append(img);
 setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong();
 userSelect();
-
-
-
 
 
 

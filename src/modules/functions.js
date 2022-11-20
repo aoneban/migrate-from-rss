@@ -1,5 +1,6 @@
 import birdsData from "./data";
-
+import fail from "./soundFail";
+import win from "./soundWin";
 //array of passerine birds
 //создан массив имен птиц семейства воробьиных
 
@@ -61,12 +62,38 @@ export function generatePlayerWithSong() {
   list.appendChild(audio);
 }
 
+//generates a specific auxiliary array of objects
+//генерирует определенный вспомогательный массив объектов
 export function birdsArray(arr, num) {
   let newBirds = [];
   for (let i = 0; i < 6; i++) {
     newBirds.push(arr[num][i]);
   }
   return newBirds.map((el) => el);
+}
+
+// finding and generation link to photo of guess bird
+//находит генерирует ссылку на фото угаданной птицы
+export function birdsNewImage(arr, num, bird) {
+  let newImage = "";
+  let newBirds = [];
+  for (let i = 0; i < 6; i++) {
+    newBirds.push(arr[num][i]);
+  }
+  newBirds.map((el) => {
+    if (el.name == bird) {
+      newImage += el.image;
+    }
+  });
+  return newImage;
+}
+
+//sound of win or fail
+//звук победы или неудачи
+export function soundClick(link) {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = link; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
 }
 
 // user's selection of a specific bird
@@ -78,7 +105,6 @@ export function userSelect() {
     .replace('" type="audio/mp3">', "")
     .trim();
   let arr = birdsArray(birdsData, 0);
-  console.log(arr);
   const newArr = document.getElementsByClassName("data-birds");
   for (let item of newArr) {
     item.addEventListener("click", (e) => {
@@ -90,12 +116,21 @@ export function userSelect() {
             arr[i].name === e.currentTarget.innerText &&
             arr[i].audio === audioSong
           ) {
-            console.log("текущее" + e.target.innerHTML);
+            soundClick(win);
+            let firstImg = document.querySelector(".img");
+            firstImg.remove();
+            let imgNewWrap = document.querySelector(".main-wrapper");
+            const img = new Image();
+            img.src = birdsNewImage(birdsData, 0, e.currentTarget.innerText);
+            img.width = 220;
+            img.height = 150;
+            imgNewWrap.insertAdjacentElement("afterbegin", img);
             let winName = document.querySelector(".h3-class");
             winName.innerText = e.currentTarget.innerText;
             e.currentTarget.firstChild.style.backgroundColor = "green";
             alert("Ура!");
           } else {
+            soundClick(fail);
             if (e.currentTarget.firstChild.style.backgroundColor !== "green") {
               e.currentTarget.firstChild.style.backgroundColor = "red";
             }
