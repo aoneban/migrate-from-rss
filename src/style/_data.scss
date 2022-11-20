@@ -19,6 +19,9 @@
       border-bottom: 1px solid $text2;
       color: $text2;
       margin: 0;
+      &:hover{
+        background: #777;
+      }
       cursor: pointer;
       .dot {
         display: inline-block;

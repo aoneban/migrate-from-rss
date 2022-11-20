@@ -8,7 +8,8 @@ import {
   randomInteger,
   randomSongGenerator,
   generatePlayerWithSong,
-  userChoise
+  userSelect,
+  birdsArray
 } from "./modules/functions";
 
 const imgWrap = document.querySelector(".img");
@@ -19,4 +20,11 @@ imgWrap.append(img);
 
 setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong();
-userChoise()
+userSelect();
+
+
+
+
+
+
+
