@@ -1,6 +1,7 @@
 import birdsData from "./data";
 import fail from "./soundFail";
 import win from "./soundWin";
+import code from "../img/code.jpg";
 
 //array of passerine birds
 //создан массив имен птиц семейства воробьиных
@@ -47,18 +48,23 @@ export function randomSongGenerator(arr, num) {
 // функция создания плеера и добавления в него рандомной песни
 //the function of creating a player and adding a random song to it
 export function generatePlayerWithSong(numArray) {
-  let list = document.querySelector(".content-bird");
+  let imgWrap = document.querySelector(".content-bird");
   document.querySelector(".content-bird").innerHTML = "";
-
+  //let imgWrap = document.createElement(".img");
+  //list.appendChild(imgWrap)
+  let img = new Image();
+  img.src = code;
+  img.width = 200;
+  imgWrap.append(img);
   let h3 = document.createElement("h3");
   h3.classList.add("h3-class");
   h3.textContent = "*****";
-  list.appendChild(h3);
+  imgWrap.appendChild(h3);
   let audio = document.createElement("div");
   audio.innerHTML = `<audio controls>
   <source src="${randomSongGenerator(birdsData, numArray)}" type="audio/mp3">
-</audio>`;
-  list.appendChild(audio);
+  </audio>`;
+  imgWrap.appendChild(audio);
 }
 
 //generates a specific auxiliary array of objects
@@ -166,7 +172,7 @@ export function userSelect(numArray) {
             alert("Ура!");
             soundClick(win);
             document.querySelector(".next-level").style.backgroundColor = 'green'
-            let oldImg = document.querySelector(".img");
+            let oldImg = document.querySelector(".content-bird > img");
             oldImg.remove();
             let imgNewWrap = document.querySelector(".main-wrapper");
             let img = new Image();

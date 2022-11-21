@@ -1,7 +1,7 @@
 import "./index.html";
 import "./index.scss";
-import code from "./img/code.jpg";
 import birdsData from "./modules/data";
+import code from "./img/code.jpg";
 
 import {
   birdsNames,
@@ -15,21 +15,30 @@ import {
   birdsNewDesc,
 } from "./modules/functions";
 
-let imgWrap = document.querySelector(".img");
-let img = new Image();
-img.src = code;
-img.width = 200;
-imgWrap.append(img);
+(function myRequest() {
+  alert(
+    "Ребята и девчата, прошу проверить работу ближе к окончанию срока проверки. Надеюсь на понимание. Спасибо."
+  );
+})();
 
 setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong(0);
 userSelect(0);
 
-let testBut = document.querySelector(".next-level");
-testBut.addEventListener("click", newFunc);
+let current = 1
+let buttonToNextLevel = document.querySelector(".next-level");
+buttonToNextLevel.addEventListener("click", newFunc);
 
 function newFunc() {
-   setBirds(birdsNames(birdsData, 1));
-   generatePlayerWithSong(1);
-   userSelect(1);
+  current +=1
+  let myDelete = document.querySelector('.main-wrapper img')
+  myDelete.remove()
+  setBirds(birdsNames(birdsData, current)); 
+  generatePlayerWithSong(current);
+  userSelect(current);
 }
+
+
+
+
+
