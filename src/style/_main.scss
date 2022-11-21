@@ -12,6 +12,7 @@
     margin-left: 10px;
     max-width: 220px;
     max-height: 150px;
+    border-radius: 7px;
 }
 
 .main-wrapper > .content-bird {
@@ -30,13 +31,27 @@
 
 .new-h3 {
     color: $text2;
-    margin: 10px;
-    border-bottom: 1px solid $text2;
+    margin: 10px 10px 0 10px;
     padding-bottom: 5px;
+    font-size: 1.5rem;
 }
 
 .new-h4 {
     margin-left: 10px;
+    margin-bottom: 10px;
     font-size: 18px;
     
+}
+
+.new-image {
+    float: left;
+    width: 200px;
+    height: 140px;
+    border-radius: 7px;
+    margin: 0 10px;
+}
+
+.new-desc {
+    line-height: 1.3;
+    font-size: 1.0em;
 }

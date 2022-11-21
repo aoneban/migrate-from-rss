@@ -13,21 +13,23 @@ import {
   birdsArray,
   birdsNewImage,
   birdsNewDesc,
-  } from "./modules/functions";
+} from "./modules/functions";
 
-const imgWrap = document.querySelector(".img");
-const img = new Image();
+let imgWrap = document.querySelector(".img");
+let img = new Image();
 img.src = code;
 img.width = 200;
 imgWrap.append(img);
 
 setBirds(birdsNames(birdsData, 0));
-generatePlayerWithSong();
-userSelect();
+generatePlayerWithSong(0);
+userSelect(0);
 
-let testBut = document.querySelector(".next-level")
-testBut.addEventListener("click", newFunc)
+let testBut = document.querySelector(".next-level");
+testBut.addEventListener("click", newFunc);
 
 function newFunc() {
-  alert('Hi')
+   setBirds(birdsNames(birdsData, 1));
+   generatePlayerWithSong(1);
+   userSelect(1);
 }

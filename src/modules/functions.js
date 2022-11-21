@@ -1,9 +1,9 @@
 import birdsData from "./data";
 import fail from "./soundFail";
 import win from "./soundWin";
+
 //array of passerine birds
 //создан массив имен птиц семейства воробьиных
-
 export function birdsNames(arr, num) {
   let newBirds = [];
   for (let i = 0; i < 6; i++) {
@@ -14,7 +14,6 @@ export function birdsNames(arr, num) {
 
 //list of birds
 //вывод массива имен сеймейства воробьиных
-
 export function setBirds(data) {
   const list = document.querySelector(".wrapper-list");
   document.querySelector(".wrapper-list").innerHTML = "";
@@ -47,17 +46,17 @@ export function randomSongGenerator(arr, num) {
 
 // функция создания плеера и добавления в него рандомной песни
 //the function of creating a player and adding a random song to it
-export function generatePlayerWithSong() {
-  const list = document.querySelector(".content-bird");
+export function generatePlayerWithSong(numArray) {
+  let list = document.querySelector(".content-bird");
   document.querySelector(".content-bird").innerHTML = "";
 
-  const h3 = document.createElement("h3");
+  let h3 = document.createElement("h3");
   h3.classList.add("h3-class");
   h3.textContent = "*****";
   list.appendChild(h3);
-  const audio = document.createElement("div");
+  let audio = document.createElement("div");
   audio.innerHTML = `<audio controls>
-  <source src="${randomSongGenerator(birdsData, 0)}" type="audio/mp3">
+  <source src="${randomSongGenerator(birdsData, numArray)}" type="audio/mp3">
 </audio>`;
   list.appendChild(audio);
 }
@@ -120,7 +119,21 @@ export function birdsLatinoDesc(arr, num, bird) {
   return newDesk;
 }
 
-console.log(birdsLatinoDesc(birdsData, 0, 'Ласточка'))
+// finding and generation audio-link of bird 
+//находит генерирует аудио-ссылку на выбранную птицу
+export function birdsAudio(arr, num, bird) {
+  let newDesk = "";
+  let newBirds = [];
+  for (let i = 0; i < 6; i++) {
+    newBirds.push(arr[num][i]);
+  }
+  newBirds.map((el) => {
+    if (el.name == bird) {
+      newDesk += el.audio;
+    }
+  });
+  return newDesk;
+}
 
 //sound of win or fail
 //звук победы или неудачи
@@ -132,13 +145,13 @@ export function soundClick(link) {
 
 // user's selection of a specific bird
 //функция выбора пользователем определенной птицы
-export function userSelect() {
+export function userSelect(numArray) {
   let audioSong = document
     .querySelector("audio")
     .innerHTML.replace('<source src="', "")
     .replace('" type="audio/mp3">', "")
     .trim();
-  let arr = birdsArray(birdsData, 0);
+  let arr = birdsArray(birdsData, numArray);
   const newArr = document.getElementsByClassName("data-birds");
   for (let item of newArr) {
     item.addEventListener("click", (e) => {
@@ -157,7 +170,7 @@ export function userSelect() {
             oldImg.remove();
             let imgNewWrap = document.querySelector(".main-wrapper");
             let img = new Image();
-            img.src = birdsNewImage(birdsData, 0, e.currentTarget.innerText);
+            img.src = birdsNewImage(birdsData, numArray, e.currentTarget.innerText);
             img.width = 220;
             img.height = 150;
             imgNewWrap.insertAdjacentElement("afterbegin", img);
@@ -172,8 +185,13 @@ export function userSelect() {
               document.querySelector(".chouse-birds").innerHTML = ""
               newContent.innerHTML = `
               <div class="new-content">
+              <img class="new-image" src=${birdsNewImage(birdsData, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
               <h3 class="new-h3">${e.currentTarget.innerText}</h3>
-              <h4 class="new-h4">${birdsLatinoDesc(birdsData, 0, e.currentTarget.innerText)}</h4>
+              <h4 class="new-h4">${birdsLatinoDesc(birdsData, numArray, e.currentTarget.innerText)}</h4>
+              <audio controls>
+                <source src="${birdsAudio(birdsData, numArray, e.currentTarget.innerText)}" type="audio/mp3">
+              </audio>
+              <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
               </div>
              `
             }

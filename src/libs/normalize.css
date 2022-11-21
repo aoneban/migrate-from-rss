@@ -148,6 +148,7 @@ sup {
 img {
   border-style: none;
   margin-right: 30px;
+  border-radius: 8px;
 }
 
 /* Forms
