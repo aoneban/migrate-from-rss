@@ -12,6 +12,7 @@ import {
   userSelect,
   birdsArray,
   birdsNewImage,
+  birdsNewDesc,
   } from "./modules/functions";
 
 const imgWrap = document.querySelector(".img");
@@ -24,6 +25,9 @@ setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong();
 userSelect();
 
+let testBut = document.querySelector(".next-level")
+testBut.addEventListener("click", newFunc)
 
-
-
+function newFunc() {
+  alert('Hi')
+}

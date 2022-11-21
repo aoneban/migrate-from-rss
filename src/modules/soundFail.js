@@ -1,5 +1,5 @@
 const fail =
-  "http://commondatastorage.googleapis.com/codeskulptor-assets/jump.ogg";
+  "https://birds-quiz.netlify.app/static/media/error.165166d5.mp3";
 
 export default fail;
 

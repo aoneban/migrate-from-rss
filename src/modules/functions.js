@@ -88,6 +88,40 @@ export function birdsNewImage(arr, num, bird) {
   return newImage;
 }
 
+// finding and generation link to description of bird
+//находит генерирует ссылку на описание текущей птицы
+export function birdsDesc(arr, num, bird) {
+  let newDesk = "";
+  let newBirds = [];
+  for (let i = 0; i < 6; i++) {
+    newBirds.push(arr[num][i]);
+  }
+  newBirds.map((el) => {
+    if (el.name == bird) {
+      newDesk += el.description;
+    }
+  });
+  return newDesk;
+}
+
+// finding and generation link to latino description of bird 
+//находит генерирует ссылку на описание текущей птицы на латинском зыке
+export function birdsLatinoDesc(arr, num, bird) {
+  let newDesk = "";
+  let newBirds = [];
+  for (let i = 0; i < 6; i++) {
+    newBirds.push(arr[num][i]);
+  }
+  newBirds.map((el) => {
+    if (el.name == bird) {
+      newDesk += el.species;
+    }
+  });
+  return newDesk;
+}
+
+console.log(birdsLatinoDesc(birdsData, 0, 'Ласточка'))
+
 //sound of win or fail
 //звук победы или неудачи
 export function soundClick(link) {
@@ -116,11 +150,13 @@ export function userSelect() {
             arr[i].name === e.currentTarget.innerText &&
             arr[i].audio === audioSong
           ) {
+            alert("Ура!");
             soundClick(win);
-            let firstImg = document.querySelector(".img");
-            firstImg.remove();
+            document.querySelector(".next-level").style.backgroundColor = 'green'
+            let oldImg = document.querySelector(".img");
+            oldImg.remove();
             let imgNewWrap = document.querySelector(".main-wrapper");
-            const img = new Image();
+            let img = new Image();
             img.src = birdsNewImage(birdsData, 0, e.currentTarget.innerText);
             img.width = 220;
             img.height = 150;
@@ -128,11 +164,18 @@ export function userSelect() {
             let winName = document.querySelector(".h3-class");
             winName.innerText = e.currentTarget.innerText;
             e.currentTarget.firstChild.style.backgroundColor = "green";
-            alert("Ура!");
           } else {
             soundClick(fail);
             if (e.currentTarget.firstChild.style.backgroundColor !== "green") {
               e.currentTarget.firstChild.style.backgroundColor = "red";
+              let newContent = document.querySelector(".chouse-birds")
+              document.querySelector(".chouse-birds").innerHTML = ""
+              newContent.innerHTML = `
+              <div class="new-content">
+              <h3 class="new-h3">${e.currentTarget.innerText}</h3>
+              <h4 class="new-h4">${birdsLatinoDesc(birdsData, 0, e.currentTarget.innerText)}</h4>
+              </div>
+             `
             }
           }
         }
