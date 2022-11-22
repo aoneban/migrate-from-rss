@@ -50,20 +50,21 @@ export function randomSongGenerator(arr, num) {
 export function generatePlayerWithSong(numArray) {
   let imgWrap = document.querySelector(".content-bird");
   document.querySelector(".content-bird").innerHTML = "";
-  //let imgWrap = document.createElement(".img");
-  //list.appendChild(imgWrap)
   let img = new Image();
   img.src = code;
-  img.width = 200;
+  img.width = 220;
+  img.height = 150;
   imgWrap.append(img);
   let h3 = document.createElement("h3");
   h3.classList.add("h3-class");
   h3.textContent = "*****";
-  imgWrap.appendChild(h3);
   let audio = document.createElement("div");
-  audio.innerHTML = `<audio controls>
+  audio.classList.add('player-content')
+  audio.innerHTML = `
+  <audio controls>
   <source src="${randomSongGenerator(birdsData, numArray)}" type="audio/mp3">
   </audio>`;
+  audio.insertAdjacentElement('afterbegin', h3)
   imgWrap.appendChild(audio);
 }
 
@@ -171,6 +172,8 @@ export function userSelect(numArray) {
           ) {
             alert("Ура!");
             soundClick(win);
+            //let button = document.querySelector(".next-level")
+            document.getElementById("btn").disabled = false;
             document.querySelector(".next-level").style.backgroundColor = 'green'
             let oldImg = document.querySelector(".content-bird > img");
             oldImg.remove();

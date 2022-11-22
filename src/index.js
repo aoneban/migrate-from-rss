@@ -25,20 +25,17 @@ setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong(0);
 userSelect(0);
 
-let current = 1
-let buttonToNextLevel = document.querySelector(".next-level");
-buttonToNextLevel.addEventListener("click", newFunc);
+let current = 1;
+let buttonToNextLevel = document.getElementById("btn");
+buttonToNextLevel.addEventListener("click", enterNewLevel);
 
-function newFunc() {
-  current +=1
-  let myDelete = document.querySelector('.main-wrapper img')
-  myDelete.remove()
-  setBirds(birdsNames(birdsData, current)); 
+function enterNewLevel() {
+  document.getElementById("btn").disabled = true;
+  document.querySelector(".next-level").style.backgroundColor = "#999";
+  let myDelete = document.querySelector(".main-wrapper img");
+  current += 1;
+  myDelete.remove();
+  setBirds(birdsNames(birdsData, current));
   generatePlayerWithSong(current);
   userSelect(current);
 }
-
-
-
-
-
