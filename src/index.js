@@ -39,3 +39,5 @@ function enterNewLevel() {
   generatePlayerWithSong(current);
   userSelect(current);
 }
+
+

@@ -150,9 +150,21 @@ export function soundClick(link) {
   audio.autoplay = true; // Автоматически запускаем
 }
 
+export function numCount(num) {
+  if (num === 6) return 0;
+  if (num === 5) return 1;
+  if (num === 4) return 2;
+  if (num === 3) return 3;
+  if (num === 2) return 4;
+  if (num === 1) return 5;
+}
+
+let totalScore = 0
+
 // user's selection of a specific bird
 //функция выбора пользователем определенной птицы
 export function userSelect(numArray) {
+  let sumPointsArray = []
   let audioSong = document
     .querySelector("audio")
     .innerHTML.replace('<source src="', "")
@@ -172,7 +184,6 @@ export function userSelect(numArray) {
           ) {
             alert("Ура!");
             soundClick(win);
-            //let button = document.querySelector(".next-level")
             document.getElementById("btn").disabled = false;
             document.querySelector(".next-level").style.backgroundColor = 'green'
             let oldImg = document.querySelector(".content-bird > img");
@@ -186,9 +197,17 @@ export function userSelect(numArray) {
             let winName = document.querySelector(".h3-class");
             winName.innerText = e.currentTarget.innerText;
             e.currentTarget.firstChild.style.backgroundColor = "green";
+            let score = document.querySelector(".score")
+            score.innerHTML = `Score: ${totalScore += numCount(sumPointsArray.length)}`
+            
           } else {
             soundClick(fail);
-            if (e.currentTarget.firstChild.style.backgroundColor !== "green") {
+            // подсчет попыток
+            if (!sumPointsArray.includes(e.currentTarget.innerText)) {
+              sumPointsArray.push(e.currentTarget.innerText)
+            }
+            if (e.currentTarget.firstChild.style.backgroundColor !== "green") { 
+              console.log(sumPointsArray.length)
               e.currentTarget.firstChild.style.backgroundColor = "red";
               let newContent = document.querySelector(".chouse-birds")
               document.querySelector(".chouse-birds").innerHTML = ""
