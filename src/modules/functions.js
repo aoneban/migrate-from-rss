@@ -159,7 +159,7 @@ export function numCount(num) {
   if (num === 1) return 5;
 }
 
-let totalScore = 0
+export let totalScore = 0
 
 // user's selection of a specific bird
 //функция выбора пользователем определенной птицы

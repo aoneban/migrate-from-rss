@@ -2,6 +2,7 @@ import "./index.html";
 import "./index.scss";
 import birdsData from "./modules/data";
 import code from "./img/code.jpg";
+import { totalScore } from "./modules/functions"
 
 import {
   birdsNames,
@@ -30,14 +31,24 @@ let buttonToNextLevel = document.getElementById("btn");
 buttonToNextLevel.addEventListener("click", enterNewLevel);
 
 function enterNewLevel() {
+  if (current === 6) {
+    let playElse = prompt("Игра окончена. Сыграем еще раз?");
+    if (playElse == "да") {
+      let score = document.querySelector(".score")
+      score.innerHTML = `Score: 0`
+      current = 0
+      totalScore = 0
+      setBirds(birdsNames(birdsData, current));
+      generatePlayerWithSong(current);
+      userSelect(current);
+    }
+  }
   document.getElementById("btn").disabled = true;
   document.querySelector(".next-level").style.backgroundColor = "#999";
   let myDelete = document.querySelector(".main-wrapper img");
-  current += 1;
   myDelete.remove();
   setBirds(birdsNames(birdsData, current));
   generatePlayerWithSong(current);
   userSelect(current);
+  current += 1;
 }
-
-
