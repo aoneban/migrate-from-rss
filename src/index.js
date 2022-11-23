@@ -14,6 +14,8 @@ import {
   birdsArray,
   birdsNewImage,
   birdsNewDesc,
+  f1, 
+  addNewCart,
 } from "./modules/functions";
 
 (function myRequest() {
@@ -32,7 +34,7 @@ buttonToNextLevel.addEventListener("click", enterNewLevel);
 
 function enterNewLevel() {
   if (current === 6) {
-    let playElse = prompt("Игра окончена. Сыграем еще раз?");
+    let playElse = prompt("Игра окончена. Напишите 'да' и сыграем еще раз.");
     if (playElse == "да") {
       let score = document.querySelector(".score")
       score.innerHTML = `Score: 0`

@@ -150,6 +150,18 @@ export function soundClick(link) {
   audio.autoplay = true; // Автоматически запускаем
 }
 
+export function f1(namebird, namesong, array) {
+  let newArr = []
+    array.map(el => {
+    if ( el.name == namebird && el.audio == namesong) {
+      newArr.push(true)
+    } else {
+      newArr.push(false)
+    }
+   })
+   return newArr.includes(true)
+}
+
 export function numCount(num) {
   if (num === 6) return 0;
   if (num === 5) return 1;
@@ -170,18 +182,13 @@ export function userSelect(numArray) {
     .innerHTML.replace('<source src="', "")
     .replace('" type="audio/mp3">', "")
     .trim();
-  let arr = birdsArray(birdsData, numArray);
   const newArr = document.getElementsByClassName("data-birds");
   for (let item of newArr) {
     item.addEventListener("click", (e) => {
       if (e.target !== e.currentTarget) {
         e.stopPropagation();
       } else {
-        for (let i = 0; i < arr.length; i++) {
-          if (
-            arr[i].name === e.currentTarget.innerText &&
-            arr[i].audio === audioSong
-          ) {
+          if ( f1(e.currentTarget.innerText, audioSong, birdsArray(birdsData, numArray)) == true) {
             alert("Ура!");
             soundClick(win);
             document.getElementById("btn").disabled = false;
@@ -199,7 +206,19 @@ export function userSelect(numArray) {
             e.currentTarget.firstChild.style.backgroundColor = "green";
             let score = document.querySelector(".score")
             score.innerHTML = `Score: ${totalScore += numCount(sumPointsArray.length)}`
-            
+            let newContent = document.querySelector(".chouse-birds")
+            document.querySelector(".chouse-birds").innerHTML = ""
+            newContent.innerHTML = `
+            <div class="new-content">
+            <img class="new-image" src=${birdsNewImage(birdsData, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
+            <h3 class="new-h3">${e.currentTarget.innerText}</h3>
+            <h4 class="new-h4">${birdsLatinoDesc(birdsData, numArray, e.currentTarget.innerText)}</h4>
+            <audio controls>
+              <source src="${birdsAudio(birdsData, numArray, e.currentTarget.innerText)}" type="audio/mp3">
+            </audio>
+            <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
+            </div>
+           `
           } else {
             soundClick(fail);
             // подсчет попыток
@@ -207,7 +226,6 @@ export function userSelect(numArray) {
               sumPointsArray.push(e.currentTarget.innerText)
             }
             if (e.currentTarget.firstChild.style.backgroundColor !== "green") { 
-              console.log(sumPointsArray.length)
               e.currentTarget.firstChild.style.backgroundColor = "red";
               let newContent = document.querySelector(".chouse-birds")
               document.querySelector(".chouse-birds").innerHTML = ""
@@ -224,8 +242,8 @@ export function userSelect(numArray) {
              `
             }
           }
-        }
       }
     });
   }
 }
+
