@@ -60,11 +60,15 @@ export function generatePlayerWithSong(numArray) {
   h3.textContent = "*****";
   let audio = document.createElement("div");
   audio.classList.add('player-content')
-  audio.innerHTML = `
+  audio.insertAdjacentElement('afterbegin', h3)
+  let audioWrapper = document.createElement("div")
+  audioWrapper.classList.add("audio-wrapper")
+  audio.appendChild(audioWrapper)
+  audioWrapper.innerHTML = `
   <audio controls>
   <source src="${randomSongGenerator(birdsData, numArray)}" type="audio/mp3">
   </audio>`;
-  audio.insertAdjacentElement('afterbegin', h3)
+  
   imgWrap.appendChild(audio);
 }
 
@@ -163,12 +167,12 @@ export function f1(namebird, namesong, array) {
 }
 
 export function numCount(num) {
-  if (num === 6) return 0;
-  if (num === 5) return 1;
-  if (num === 4) return 2;
-  if (num === 3) return 3;
-  if (num === 2) return 4;
-  if (num === 1) return 5;
+  if (num === 5) return 0;
+  if (num === 4) return 1;
+  if (num === 3) return 2;
+  if (num === 2) return 3;
+  if (num === 1) return 4;
+  if (num === 0) return 5;
 }
 
 export let totalScore = 0
@@ -219,13 +223,9 @@ export function userSelect(numArray) {
             <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
             </div>
            `
-          } else {
-            soundClick(fail);
-            // подсчет попыток
-            if (!sumPointsArray.includes(e.currentTarget.innerText)) {
+          } else { 
+              soundClick(fail);
               sumPointsArray.push(e.currentTarget.innerText)
-            }
-            if (e.currentTarget.firstChild.style.backgroundColor !== "green") { 
               e.currentTarget.firstChild.style.backgroundColor = "red";
               let newContent = document.querySelector(".chouse-birds")
               document.querySelector(".chouse-birds").innerHTML = ""
@@ -240,7 +240,6 @@ export function userSelect(numArray) {
               <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
               </div>
              `
-            }
           }
       }
     });

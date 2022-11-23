@@ -1,8 +1,19 @@
 .header-wrapper {
   width: 70%;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+body {
+  background-image: url(./img/fon-33.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -3,13 +3,12 @@
   margin: 20px auto;
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    background: $back2;
+    background: #999999;
     border-radius: 4px;
-    min-height: 35px;
-    padding: 20px 15px;
+    min-height: 52px;
   }
   li {
     list-style: none;
@@ -17,6 +16,18 @@
   a {
     color: $text2;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .nav-bar ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .nav-bar ul {
+    flex-direction: column;
   }
 }
 
