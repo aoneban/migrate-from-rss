@@ -188,7 +188,7 @@ export function userSelect(numArray) {
       if (e.target !== e.currentTarget) {
         e.stopPropagation();
       } else {
-          if ( f1(e.currentTarget.innerText, audioSong, birdsArray(birdsData, numArray)) == true) {
+          if ( f1(e.currentTarget.innerText, audioSong, birdsArray(birdsData, numArray)) === true) {
             alert("Ура!");
             soundClick(win);
             document.getElementById("btn").disabled = false;
