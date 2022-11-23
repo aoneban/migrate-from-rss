@@ -196,7 +196,7 @@ export function userSelect(numArray) {
             alert("Ура!");
             soundClick(win);
             document.getElementById("btn").disabled = false;
-            document.querySelector(".next-level").style.backgroundColor = 'green'
+            document.querySelector(".next-level").style.backgroundColor = '#66c196'
             let oldImg = document.querySelector(".content-bird > img");
             oldImg.remove();
             let imgNewWrap = document.querySelector(".main-wrapper");
@@ -207,7 +207,7 @@ export function userSelect(numArray) {
             imgNewWrap.insertAdjacentElement("afterbegin", img);
             let winName = document.querySelector(".h3-class");
             winName.innerText = e.currentTarget.innerText;
-            e.currentTarget.firstChild.style.backgroundColor = "green";
+            e.currentTarget.firstChild.style.backgroundColor = "#66c196";
             let score = document.querySelector(".score")
             score.innerHTML = `Score: ${totalScore += numCount(sumPointsArray.length)}`
             let newContent = document.querySelector(".chouse-birds")
@@ -226,7 +226,7 @@ export function userSelect(numArray) {
           } else { 
               soundClick(fail);
               sumPointsArray.push(e.currentTarget.innerText)
-              e.currentTarget.firstChild.style.backgroundColor = "red";
+              e.currentTarget.firstChild.style.backgroundColor = "#ed413d";
               let newContent = document.querySelector(".chouse-birds")
               document.querySelector(".chouse-birds").innerHTML = ""
               newContent.innerHTML = `
