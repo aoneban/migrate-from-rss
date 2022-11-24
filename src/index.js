@@ -14,15 +14,9 @@ import {
   birdsArray,
   birdsNewImage,
   birdsNewDesc,
-  f1, 
+  f1,
   addNewCart,
 } from "./modules/functions";
-
-(function myRequest() {
-  alert(
-    "Ребята и девчата, прошу проверить работу ближе к окончанию срока проверки. Надеюсь на понимание. Спасибо."
-  );
-})();
 
 setBirds(birdsNames(birdsData, 0));
 generatePlayerWithSong(0);
@@ -36,10 +30,10 @@ function enterNewLevel() {
   if (current === 6) {
     let playElse = prompt("Игра окончена. Напишите 'да' и сыграем еще раз.");
     if (playElse == "да") {
-      let score = document.querySelector(".score")
-      score.innerHTML = `Score: 0`
-      current = 0
-      totalScore = 0
+      let score = document.querySelector(".score");
+      score.innerHTML = `Счет игры: 0`;
+      current = 0;
+      totalScore = 0;
       setBirds(birdsNames(birdsData, current));
       generatePlayerWithSong(current);
       userSelect(current);
@@ -54,3 +48,8 @@ function enterNewLevel() {
   userSelect(current);
   current += 1;
 }
+
+const button = document.getElementById("mbtn");
+button.addEventListener("click", () => {
+  alert("hi");
+});

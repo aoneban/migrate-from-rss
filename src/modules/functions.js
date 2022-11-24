@@ -193,7 +193,6 @@ export function userSelect(numArray) {
         e.stopPropagation();
       } else {
           if ( f1(e.currentTarget.innerText, audioSong, birdsArray(birdsData, numArray)) === true) {
-            alert("Ура!");
             soundClick(win);
             document.getElementById("btn").disabled = false;
             document.querySelector(".next-level").style.backgroundColor = '#66c196'

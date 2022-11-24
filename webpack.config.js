@@ -16,7 +16,8 @@ module.exports = {
     open: true,
     hot: true,
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+  entry: { index: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+          },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -25,7 +26,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'example.html',
+      template: path.resolve(__dirname, 'src', 'example.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

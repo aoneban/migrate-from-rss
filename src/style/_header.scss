@@ -17,3 +17,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+a {
+  text-decoration: none!important;
+}
+
+.active {
+  font-size: 1.1em;
+  color: $text!important;
+  border-radius: 20px;
+}
