@@ -5,8 +5,10 @@
 }
 
 body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background-color: $back;
   color: $text;
+  font-style: normal;
+  font-weight: normal;
   max-width: 1920px;
 }

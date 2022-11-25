@@ -1,5 +1,14 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/montserrat-v23-latin_cyrillic-700.woff2') format('woff2'),
-       url('fonts/montserrat-v23-latin_cyrillic-700.woff') format('woff');
+  font-family: 'Cherry Bomb One Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cherry Bomb One Regular'), url('fonts/cherrybombone-regular.woff') format('woff');
+  }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/montserrat-v23-latin_cyrillic-700.woff2") format("woff2"),
+    url("fonts/montserrat-v23-latin_cyrillic-700.woff") format("woff");
 }
+
+

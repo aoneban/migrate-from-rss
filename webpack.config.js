@@ -16,7 +16,7 @@ module.exports = {
     open: true,
     hot: true,
   },
-  entry: { index: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+  entry: { index: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')]
           },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -61,7 +61,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff2?$/i,
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]'

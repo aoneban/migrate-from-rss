@@ -1,4 +1,4 @@
-import birdsData from "./data";
+import birdsDataEn from "./dataEn";
 import fail from "./soundFail";
 import win from "./soundWin";
 import code from "../img/code.jpg";
@@ -66,9 +66,8 @@ export function generatePlayerWithSong(numArray) {
   audio.appendChild(audioWrapper)
   audioWrapper.innerHTML = `
   <audio controls>
-  <source src="${randomSongGenerator(birdsData, numArray)}" type="audio/mp3">
+  <source src="${randomSongGenerator(birdsDataEn, numArray)}" type="audio/mp3">
   </audio>`;
-  
   imgWrap.appendChild(audio);
 }
 
@@ -154,7 +153,9 @@ export function soundClick(link) {
   audio.autoplay = true; // Автоматически запускаем
 }
 
-export function f1(namebird, namesong, array) {
+//filtering check of the array of birds for the selected individual
+//проверка массива птиц на выбранную особь
+export function helperFilter(namebird, namesong, array) {
   let newArr = []
     array.map(el => {
     if ( el.name == namebird && el.audio == namesong) {
@@ -177,6 +178,24 @@ export function numCount(num) {
 
 export let totalScore = 0
 
+//генерирует и выводит итоговый счет
+//generation and view final amount
+export function finalPage() {
+  let body = document.getElementsByTagName("body")[0];
+  document.getElementsByTagName("body").innerHTML = "";
+  let div = document.createElement("div");
+  body.appendChild(div);
+  div.innerHTML = `
+<div class="container">
+  <div class="movie-content">
+    <p id="ivt" class="invite invite-wrapper">You scored ${totalScore} points out of 30</p>
+    <a class="center center-final" href="./example.html">Play again</a>
+  </div>
+</div>
+`;
+}
+
+
 // user's selection of a specific bird
 //функция выбора пользователем определенной птицы
 export function userSelect(numArray) {
@@ -192,7 +211,7 @@ export function userSelect(numArray) {
       if (e.target !== e.currentTarget) {
         e.stopPropagation();
       } else {
-          if ( f1(e.currentTarget.innerText, audioSong, birdsArray(birdsData, numArray)) === true) {
+          if ( helperFilter(e.currentTarget.innerText, audioSong, birdsArray(birdsDataEn, numArray)) === true) {
             soundClick(win);
             document.getElementById("btn").disabled = false;
             document.querySelector(".next-level").style.backgroundColor = '#66c196'
@@ -200,7 +219,7 @@ export function userSelect(numArray) {
             oldImg.remove();
             let imgNewWrap = document.querySelector(".main-wrapper");
             let img = new Image();
-            img.src = birdsNewImage(birdsData, numArray, e.currentTarget.innerText);
+            img.src = birdsNewImage(birdsDataEn, numArray, e.currentTarget.innerText);
             img.width = 220;
             img.height = 150;
             imgNewWrap.insertAdjacentElement("afterbegin", img);
@@ -213,13 +232,13 @@ export function userSelect(numArray) {
             document.querySelector(".chouse-birds").innerHTML = ""
             newContent.innerHTML = `
             <div class="new-content">
-            <img class="new-image" src=${birdsNewImage(birdsData, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
+            <img class="new-image" src=${birdsNewImage(birdsDataEn, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
             <h3 class="new-h3">${e.currentTarget.innerText}</h3>
-            <h4 class="new-h4">${birdsLatinoDesc(birdsData, numArray, e.currentTarget.innerText)}</h4>
+            <h4 class="new-h4">${birdsLatinoDesc(birdsDataEn, numArray, e.currentTarget.innerText)}</h4>
             <audio controls>
-              <source src="${birdsAudio(birdsData, numArray, e.currentTarget.innerText)}" type="audio/mp3">
+              <source src="${birdsAudio(birdsDataEn, numArray, e.currentTarget.innerText)}" type="audio/mp3">
             </audio>
-            <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
+            <p class="new-desc">${birdsDesc(birdsDataEn, numArray, e.currentTarget.innerText)}</p>
             </div>
            `
           } else { 
@@ -230,13 +249,13 @@ export function userSelect(numArray) {
               document.querySelector(".chouse-birds").innerHTML = ""
               newContent.innerHTML = `
               <div class="new-content">
-              <img class="new-image" src=${birdsNewImage(birdsData, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
+              <img class="new-image" src=${birdsNewImage(birdsDataEn, numArray, e.currentTarget.innerText)} alt=${e.currentTarget.innerText}>
               <h3 class="new-h3">${e.currentTarget.innerText}</h3>
-              <h4 class="new-h4">${birdsLatinoDesc(birdsData, numArray, e.currentTarget.innerText)}</h4>
+              <h4 class="new-h4">${birdsLatinoDesc(birdsDataEn, numArray, e.currentTarget.innerText)}</h4>
               <audio controls>
-                <source src="${birdsAudio(birdsData, numArray, e.currentTarget.innerText)}" type="audio/mp3">
+                <source src="${birdsAudio(birdsDataEn, numArray, e.currentTarget.innerText)}" type="audio/mp3">
               </audio>
-              <p class="new-desc">${birdsDesc(birdsData, numArray, e.currentTarget.innerText)}</p>
+              <p class="new-desc">${birdsDesc(birdsDataEn, numArray, e.currentTarget.innerText)}</p>
               </div>
              `
           }
