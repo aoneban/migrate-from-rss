@@ -42,7 +42,7 @@ export function randomSongGenerator(arr, num) {
     newSong.push(arr[num][i]);
   }
   newSong = newSong.map((el) => el.audio);
-  return newSong[randomInteger(1, 5)];
+  return newSong[randomInteger(0, 5)];
 }
 
 // функция создания плеера и добавления в него рандомной песни
@@ -148,7 +148,7 @@ export function birdsAudio(arr, num, bird) {
 //sound of win or fail
 //звук победы или неудачи
 export function soundClick(link) {
-  var audio = new Audio(); // Создаём новый элемент Audio
+  let audio = new Audio(); // Создаём новый элемент Audio
   audio.src = link; // Указываем путь к звуку "клика"
   audio.autoplay = true; // Автоматически запускаем
 }
@@ -186,10 +186,11 @@ export function finalPage() {
   let div = document.createElement("div");
   body.appendChild(div);
   div.innerHTML = `
-<div class="container">
+<div id="container" class="container">
   <div class="movie-content">
     <p id="ivt" class="invite invite-wrapper">You scored ${totalScore} points out of 30</p>
     <a class="center center-final" href="./example.html">Play again</a>
+    <span class="close">&times;</span>
   </div>
 </div>
 `;
@@ -263,4 +264,13 @@ export function userSelect(numArray) {
     });
   }
 }
+
+//change the active button in the menu
+//смена активной кнопки в меню
+export function activMenu(cur) {
+  let navbar = document.querySelectorAll(".nav-page a")
+  navbar[cur].classList.add("active")
+  navbar[cur - 1].classList.remove("active")
+}
+
 
