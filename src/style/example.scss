@@ -97,34 +97,26 @@ video {
 }
 
 .invite-wrapper {
-  background: #66c196;
+  font-size: 1.5em;
+  color: $text;
   padding: 5px 10px;
   position: absolute;
   top: 19%;
-  left: 7.5%;
-  z-index: 10;
-  border-radius: 8px;
-  opacity: 0.9;
+  left: 24.5%;
 }
 
-.movie-content {
+.text-content {
   position: relative;
   height: 223px;
-  width: 402px;
-  background: #66c196;
-  bottom: 443px;
-  left: 37%;
-  border-radius: 8px;
-  opacity: 0.9;
 }
 
 .center-final {
   position: absolute;
   top: 53%;
-  left: 24%;
+  left: 34%;
   background: $text;
   border: none;
-  opacity: 0.7;
+  opacity: 0.8;
   &:hover {
     background: $back4;
   }
@@ -147,90 +139,91 @@ video {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1400px) {
-  .movie-content {
-    left: 35%;
-  }
+
+@media screen and (max-width: 1350px) {
+    .invite-wrapper {
+      left: 19%;
+    }
 }
 
-
-@media screen and (max-width: 1200px) {
-  .movie-content {
-    left: 33%;
+@media screen and (max-width: 1150px) {
+  .invite-wrapper {
+    left: 17%;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  .movie-content {
-    left: 30%;
-    top:-557px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .movie-content {
-    left: 24%;
-    top:-657px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .center {
-    left: 22%;
-  }
-  .invite {
-    left: 8%;
-  }
-  .movie-content {
-    left: 21%;
-    top:-757px;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .center {
-    left: 22%;
-  }
-  .invite {
-    left: 8%;
-  }
-  .movie-content {
-    left: 15%;
-    top:-857px;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  .center {
-    font-size: 15px;
-    padding: 10px 15px;
+  .center-final {
     left: 28%;
   }
-  .invite {
-    left: 4%;
-    font-size: 13px;
+}
+
+@media screen and (max-width: 1025px) {
+  .invite-wrapper {
+    font-size: 1.2em;
   }
-  .movie-content {
-    left: 19%;
-    height: 173px;
-    width: 304px;
-    top:-957px;
+  .center-final {
+    left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 890px) {
+  .invite-wrapper {
+    font-size: 1.2em;
+    left: 9%;
+  }
+  .center-final {
+    left: 22%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .invite-wrapper {
+    font-size: 1.1em;
+    left: 2%;
+  }
+  .center-final {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .invite-wrapper {
+    font-size: 1.1em;
+    left: -2%;
+  }
+  .center-final {
+    left: 15%;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .invite-wrapper {
+    font-size: 1em;
+    left: -5%;
+  }
+  .center-final {
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .invite-wrapper {
+    font-size: 1em;
+    left: 5%;
+  }
+  .center-final {
+    padding: 10px 25px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .center {
-    font-size: 14px;
-    padding: 10px 15px;
-    left: 31%;
+  .invite-wrapper {
+    font-size: 1em;
+    left: -5%;
   }
-  .invite {
-    left: 9%;
-    font-size: 13px;
-  }
-  .movie-content {
-    left: 15%;
-    height: 153px;
-    width: 281px
+  .center-final {
+    padding: 10px 25px;
+    font-size: 1em;
   }
 }
+

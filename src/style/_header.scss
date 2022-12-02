@@ -5,6 +5,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  .gallery {
+    flex: 4;
+    text-align: right;
+    color: $back4;
+    &:hover {
+      color: $text;
+    }
+  }
 }
 
 body {

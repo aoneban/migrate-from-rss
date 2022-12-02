@@ -181,21 +181,39 @@ export let totalScore = 0
 //генерирует и выводит итоговый счет
 //generation and view final amount
 export function finalPage() {
-  let body = document.getElementsByTagName("body")[0];
-  document.getElementsByTagName("body").innerHTML = "";
-  let div = document.createElement("div");
-  body.appendChild(div);
-  div.innerHTML = `
-<div id="container" class="container">
-  <div class="movie-content">
+// get the modal
+// создаем обертку модалки
+const modal = document.getElementById("myModal");
+const modalContent = document.querySelector(".modal-body")
+// get the element that closes the modal
+// создаем крестик для закрытия
+const span = document.getElementsByClassName("close")[0];
+modal.style.display = "block";
+modalContent.innerHTML = `
+<div class="container">
+  <div class="text-content">
     <p id="ivt" class="invite invite-wrapper">You scored ${totalScore} points out of 30</p>
     <a class="center center-final" href="./example.html">Play again</a>
-    <span class="close">&times;</span>
   </div>
 </div>
-`;
+`
+// When the user clicks on (x) close the modal
+// скрытие модалки при нажатии на крест (x)
+span.onclick = function() {
+  modal.classList.add("modal-hidden")
+  setTimeout(() => {
+    modal.remove();
+  }, 100)
 }
 
+//when the user clicks anywhere outside of the modal, close it
+//закрытие модлки при нажатии на любое пустое место на дисплее
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}
 
 // user's selection of a specific bird
 //функция выбора пользователем определенной птицы
