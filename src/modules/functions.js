@@ -7,7 +7,7 @@ import code from "../img/code.jpg";
 //создан массив имен птиц семейства воробьиных
 export function birdsNames(arr, num) {
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   return newBirds.map((el) => el.name);
@@ -38,7 +38,7 @@ export function randomInteger(min, max) {
 // генератор ссылки случайной песни
 export function randomSongGenerator(arr, num) {
   let newSong = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newSong.push(arr[num][i]);
   }
   newSong = newSong.map((el) => el.audio);
@@ -75,7 +75,7 @@ export function generatePlayerWithSong(numArray) {
 //генерирует определенный вспомогательный массив объектов
 export function birdsArray(arr, num) {
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   return newBirds.map((el) => el);
@@ -86,11 +86,11 @@ export function birdsArray(arr, num) {
 export function birdsNewImage(arr, num, bird) {
   let newImage = "";
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   newBirds.map((el) => {
-    if (el.name == bird) {
+    if (el.name === bird) {
       newImage += el.image;
     }
   });
@@ -102,11 +102,11 @@ export function birdsNewImage(arr, num, bird) {
 export function birdsDesc(arr, num, bird) {
   let newDesk = "";
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   newBirds.map((el) => {
-    if (el.name == bird) {
+    if (el.name === bird) {
       newDesk += el.description;
     }
   });
@@ -118,11 +118,11 @@ export function birdsDesc(arr, num, bird) {
 export function birdsLatinoDesc(arr, num, bird) {
   let newDesk = "";
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   newBirds.map((el) => {
-    if (el.name == bird) {
+    if (el.name === bird) {
       newDesk += el.species;
     }
   });
@@ -134,11 +134,11 @@ export function birdsLatinoDesc(arr, num, bird) {
 export function birdsAudio(arr, num, bird) {
   let newDesk = "";
   let newBirds = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < arr[num].length; i++) {
     newBirds.push(arr[num][i]);
   }
   newBirds.map((el) => {
-    if (el.name == bird) {
+    if (el.name === bird) {
       newDesk += el.audio;
     }
   });
@@ -158,7 +158,7 @@ export function soundClick(link) {
 export function helperFilter(namebird, namesong, array) {
   let newArr = []
     array.map(el => {
-    if ( el.name == namebird && el.audio == namesong) {
+    if ( el.name === namebird && el.audio === namesong) {
       newArr.push(true)
     } else {
       newArr.push(false)
@@ -209,7 +209,7 @@ span.onclick = function() {
 //when the user clicks anywhere outside of the modal, close it
 //закрытие модлки при нажатии на любое пустое место на дисплее
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
 }
