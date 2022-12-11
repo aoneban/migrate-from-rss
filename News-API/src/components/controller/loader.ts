@@ -30,7 +30,7 @@ class Loader {
     }
 
     makeUrl(options: string [], endpoint: string) {
-        const urlOptions: number | string | undefined | string[] | ConcatArray<string>[] = { ...this.options, ...options };
+        const urlOptions: string[] | ConcatArray<string>[] = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
@@ -40,7 +40,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: { (): void; (arg0: string): string; }, options = {}) {     
+    load(method: string, endpoint: string, callback: { (): void; (arg0: string): string; }, options = {} ) {     
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
