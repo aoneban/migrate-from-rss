@@ -1,4 +1,4 @@
-export interface ItemsData {
+export interface IItemsData {
     urlToImage: string;
     author: string;
     source: { name: string,
@@ -8,4 +8,9 @@ export interface ItemsData {
     title: string;
     description: string;
     url: string;
+}
+
+export interface ISource {
+  id: string;
+  name: string;
 }

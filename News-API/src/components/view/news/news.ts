@@ -1,5 +1,5 @@
 import './news.css';
-import { ItemsData } from '../../../types/index';
+import { IItemsData } from '../../../types/index';
 
 class News {
     draw(data: []) {
@@ -8,7 +8,7 @@ class News {
         const fragment = document.createDocumentFragment();
         const newsItemTemp = document.querySelector('#newsItemTemp');
     
-        news.forEach((item: ItemsData, idx: number) => {
+        news.forEach((item: IItemsData, idx: number) => {
 
                 const newsClone = newsItemTemp?.content.cloneNode(true);
 
