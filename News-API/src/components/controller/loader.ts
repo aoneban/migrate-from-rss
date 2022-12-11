@@ -1,6 +1,4 @@
-interface Option {
-    apiKey: string;
-}
+import { Option } from "../../types/index";
 
 class Loader {
     baseLink: string;

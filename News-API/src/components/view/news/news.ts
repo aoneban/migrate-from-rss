@@ -12,8 +12,6 @@ class News {
 
                 const newsClone = newsItemTemp?.content.cloneNode(true);
 
-                console.log("Это я " + newsClone)
-
                 if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
 
                 newsClone.querySelector('.news__meta-photo').style.backgroundImage = `url(${
