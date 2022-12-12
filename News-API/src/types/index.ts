@@ -3,7 +3,7 @@ export enum apiKey {
 }
 
 export interface IItemsData {
-    articles: any;
+    articles: string;
     urlToImage: string;
     author: string;
     source: { name: string,
@@ -16,7 +16,7 @@ export interface IItemsData {
 }
 
 export interface ISource {
-  sources: any;
+  sources: string;
   id: string;
   name: string;
 }
