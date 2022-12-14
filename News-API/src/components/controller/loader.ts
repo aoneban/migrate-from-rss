@@ -1,24 +1,22 @@
 import { Option } from "../../types/index";
 
 class Loader {
-    baseLink: string;
-    options: Option;
-    constructor(baseLink: string, options: Option) {
+    constructor(public baseLink: string, public options: Option) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
-    getResp(
+    public getResp(
         { endpoint, options = {} },
-        callback = () => {
+        callback = (): void => {
             console.error('No callback for GET response');
         }
-    ) {
+    ): void {
         this.load('GET', endpoint, callback, options);
     }
 
-    errorHandler(res: {
-        json(): any; ok: string; status: number; statusText: string | undefined; 
+    public errorHandler(res: {
+        json(): string; ok: string; status: number; statusText: string | undefined; 
 }) {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
@@ -29,7 +27,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: string [], endpoint: string) {
+    protected makeUrl(options: string [], endpoint: string): string {
         const urlOptions: string[] | ConcatArray<string>[] = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -40,7 +38,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: { (): void; (arg0: string): string; }, options = {} ) {     
+    protected load(method: string, endpoint: string, callback: { (): void; (arg0: string): string; }, options = {} ): void {     
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
