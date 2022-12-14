@@ -1,7 +1,10 @@
 import { Option } from "../../types/index";
 
 class Loader {
-    constructor(public baseLink: string, public options: Option) {
+    public baseLink: string;
+    public options: Option;
+    
+    constructor(baseLink: Option, options: Option) {
         this.baseLink = baseLink;
         this.options = options;
     }
