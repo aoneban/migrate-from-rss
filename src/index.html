@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>hello world</h1>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-buttons">
+        <button class="btn btn-1" type="button">To garage</button>
+        <button class="btn btn-1" type="button">To winners</button>
+      </div>
+      <div class="form-choose">
+        <form>
+          <input type="text" id="car-name" name="car-name" />
+          <input type="color" id="car-color" name="car-color" value="#ff0000" />
+          <input type="submit" class="btn-3" value="Create" />
+        </form>
+        <form>
+          <input type="text" id="car-name" name="car-name" />
+          <input type="color" id="car-color" name="car-color" value="#FF8756" />
+          <input type="submit" class="btn-3" value="Update" />
+        </form>
+        <div class="control-buttons">
+          <button class="btn btn-1" type="button">Race</button>
+          <button class="btn btn-1" type="button">Reset</button>
+          <button class="btn" type="button">Generate cars</button>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="garage-wrapper">
+        <h2>Garage</h2>
+        <p class="count-cars">(6)</p>
+      </div>
+      <div class="page-wrapper">
+        <h3>Page</h3>
+        <p class="count-page">#1</p>
+      </div>
+    </section>
+    <main class="car-main">
+      
+    </main>
+  </body>
 </html>

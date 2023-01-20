@@ -1,10 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: darkslategrey;
   color: white;
   text-transform: uppercase;
+}
+
+.cars-img {
+  display: block;
+
+}
+.cars-container-img{
+  display: block;
+  border-bottom: 2px dashed #ffffff;
+}
+
+input {
+  max-width: 150px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+
+#car-color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 48px;
+  height: 36px;
+  border-radius: 10px;
+  appearance: none;
+  border: 1px solid #999;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  top: 9px;
+}
+
+.control-buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 3px;
+  padding: 7px 20px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font: normal 14px Tahoma;
+}
+
+.btn-1 {
+  color: #ffffff;
+  background: orange;
+}
+
+.btn-2 {
+  padding: 2px 5px;
+}
+
+.btn-3 {
+  height: 30px;
+  width: 100px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.finish {
+  display: block;
+  position: absolute;
+  right: 150px;
+}
+
+.garage-wrapper,
+.control-buttons,
+.page-wrapper {
+  display: flex;
+  align-items: center;
 }

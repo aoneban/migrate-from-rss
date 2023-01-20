@@ -1,8 +1,4 @@
 import './style.scss';
+import { getCars } from './modules/api';
 
-const root = document.getElementById('root');
-const img = document.createElement('img');
-img.src = './image.jpg';
-root?.append(img);
-
-console.log('Hello world');
+getCars();
