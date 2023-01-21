@@ -1,6 +1,7 @@
 import './style.scss';
 import { getCars } from './modules/api';
-import { getInputValueToCreate } from './modules/utils';
+import { getInputValueToCreate, getButtons } from './modules/utils';
 
 getCars();
 getInputValueToCreate();
+setTimeout(getButtons, 1000);

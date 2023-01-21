@@ -7,7 +7,7 @@ export function renderCars(arr: Car[]): void {
     newElem.innerHTML = `
       <div class="control-buttons">
         <button class="btn" type="button">Select</button>
-        <button class="btn" type="button">Remove</button>
+        <input type="submit" id="${el.id}" class="btn btn-remove" value="Remove"/>
         <p class="car-name">${el.name}</p>
       </div>
       <div class="cars-container-img">
@@ -15,7 +15,7 @@ export function renderCars(arr: Car[]): void {
           <button class="btn-2" type="button">A</button>
           <button class="btn-2" type="button">B</button>
         </div>
-        <div class="cars-img">
+        <div id="${el.id}" class="cars-img">
           <img class="finish" src="./finish.png" alt="finish" style="width:80px">
           <?xml version="1.0" standalone="no"?>
               <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"

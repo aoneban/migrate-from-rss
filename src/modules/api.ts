@@ -24,10 +24,21 @@ export const createCar = async (body: { name: string; color: string }): Promise<
   return data2;
 };
 
-export const main = async (car: string, color: string): Promise<void> => {
+export const mainToCreate = async (car: string, color: string): Promise<void> => {
   const data2 = await createCar({
     name: car,
     color,
   });
-  console.log(data2);
+};
+
+export const deleteCar = async (id: number): Promise<void> => {
+  const result = await fetch(`${getUrl}${path.garage}/${id}`, {
+    method: 'DELETE',
+  });
+  const deleteCars = await result.json();
+  return deleteCars;
+};
+
+export const mainToDelete = async (id: number): Promise<void> => {
+  const deleteCars = await deleteCar(id);
 };
