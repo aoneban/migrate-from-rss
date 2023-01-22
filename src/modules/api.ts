@@ -42,3 +42,25 @@ export const deleteCar = async (id: number): Promise<void> => {
 export const mainToDelete = async (id: number): Promise<void> => {
   const deleteCars = await deleteCar(id);
 };
+
+export const updateCar = async (
+  id: number,
+  body: { name: string; color: string }
+): Promise<void> => {
+  const result = await fetch(`${getUrl}${path.garage}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  const data2 = await result.json();
+  return data2;
+};
+
+export const mainToUpdate = async (id: number, car: string, color: string): Promise<void> => {
+  const data2 = await updateCar(id, {
+    name: car,
+    color,
+  });
+};

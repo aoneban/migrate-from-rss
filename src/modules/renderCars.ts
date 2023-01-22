@@ -6,7 +6,7 @@ export function renderCars(arr: Car[]): void {
     const newElem = document.createElement('div');
     newElem.innerHTML = `
       <div class="control-buttons">
-        <button class="btn" type="button">Select</button>
+        <input type="submit" id="${el.id}" class="btn btn-select" value="Select"/>
         <input type="submit" id="${el.id}" class="btn btn-remove" value="Remove"/>
         <p class="car-name">${el.name}</p>
       </div>
