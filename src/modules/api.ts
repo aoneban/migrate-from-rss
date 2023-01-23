@@ -3,6 +3,7 @@ import { renderCars } from './renderCars';
 const getUrl = 'http://localhost:3000';
 const path = {
   garage: '/garage',
+  engine: '/engine',
 };
 
 export const getCars = async (): Promise<void> => {
@@ -20,12 +21,12 @@ export const createCar = async (body: { name: string; color: string }): Promise<
     },
     body: JSON.stringify(body),
   });
-  const data2 = await result.json();
-  return data2;
+  const data = await result.json();
+  return data;
 };
 
 export const mainToCreate = async (car: string, color: string): Promise<void> => {
-  const data2 = await createCar({
+  const data = await createCar({
     name: car,
     color,
   });
@@ -54,13 +55,62 @@ export const updateCar = async (
     },
     body: JSON.stringify(body),
   });
-  const data2 = await result.json();
-  return data2;
+  const data = await result.json();
+  return data;
 };
 
 export const mainToUpdate = async (id: number, car: string, color: string): Promise<void> => {
-  const data2 = await updateCar(id, {
+  const data = await updateCar(id, {
     name: car,
     color,
   });
 };
+
+export const getToSpeed = async (id: number): Promise<void> => {
+  const result = await fetch(`${getUrl}${path.engine}?id=${id}&status=started`, {
+    method: 'PATCH',
+  });
+  const data = await result.json();
+  return data;
+};
+
+export const getMaxSpeedToCar = async (id: number): Promise<number> => {
+  const result: any = await getToSpeed(id);
+  const velocity = result.velocity as number;
+  const distance = result.distance as number;
+  const data: number = distance / velocity;
+  return data;
+};
+
+export async function driveCar(): Promise<void> {
+  setTimeout(() => {
+    const myButton = document.querySelectorAll('.btn-A');
+    myButton.forEach((el) => {
+      el.addEventListener('click', async (e) => {
+        const { id }: any = e.currentTarget;
+        const parentElem = (e.currentTarget as any).parentElement;
+        const currentImg = parentElem.nextSibling;
+        const currentImg2 = currentImg.nextSibling;
+        const newImg = currentImg2.firstChild;
+        const newImg2 = newImg.nextSibling;
+        const newImg3 = newImg2.nextSibling;
+        const newImg4 = newImg3.nextSibling;
+        const newImg5 = newImg4.nextSibling;
+        const newImg6 = newImg5.nextSibling;
+        const time = await getMaxSpeedToCar(id);
+        const speed = time / 200;
+        let width = 6;
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
+        const index = setInterval(frame, speed);
+        function frame() {
+          if (width === 190) {
+            clearInterval(index);
+          } else {
+            width++;
+            newImg6.style.width = `${width}%`;
+          }
+        }
+      });
+    });
+  }, 1000);
+}
