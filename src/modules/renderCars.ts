@@ -1,7 +1,105 @@
 import { Car } from './types';
 
+export function renderHeader(): void {
+  const root = document.getElementById('root');
+  const header = document.createElement('header');
+  const headerWrapper = document.createElement('div');
+  headerWrapper.classList.add('header-buttons');
+  const buttonOne = document.createElement('button');
+  buttonOne.classList.add('btn', 'btn-1');
+  buttonOne.textContent = 'To garage';
+  const buttonTwo = document.createElement('button');
+  buttonTwo.classList.add('btn', 'btn-1');
+  buttonTwo.textContent = 'To winners';
+  headerWrapper.append(buttonOne, buttonTwo);
+
+  const formWrapper = document.createElement('div');
+  formWrapper.classList.add('form-choose');
+  const formOne = document.createElement('form');
+  const inputOne = document.createElement('input');
+  const inputTwo = document.createElement('input');
+  const inputThree = document.createElement('input');
+  inputOne.setAttribute('type', 'text');
+  inputOne.setAttribute('id', 'car-name');
+  inputOne.setAttribute('name', 'car-name');
+  inputOne.setAttribute('value', 'KIA');
+  inputTwo.setAttribute('type', 'color');
+  inputTwo.setAttribute('id', 'car-color');
+  inputTwo.setAttribute('name', 'car-color');
+  inputTwo.setAttribute('value', '#ff0000');
+  inputThree.setAttribute('type', 'submit');
+  inputThree.setAttribute('value', 'Create');
+  inputThree.classList.add('btn-3', 'btn-6');
+
+  const formTwo = document.createElement('form');
+  const inputFour = document.createElement('input');
+  const inputFive = document.createElement('input');
+  const inputSix = document.createElement('input');
+  inputFour.setAttribute('type', 'text');
+  inputFour.setAttribute('id', 'car-name-update');
+  inputFour.setAttribute('name', 'car-name-update');
+  inputFive.setAttribute('type', 'color');
+  inputFive.setAttribute('id', 'car-color-update');
+  inputFive.setAttribute('name', 'car-color-update');
+  inputFive.setAttribute('value', '#FF8756');
+  inputSix.setAttribute('type', 'submit');
+  inputSix.setAttribute('value', 'Update');
+  inputSix.classList.add('btn-3', 'btn-7');
+
+  formOne.append(inputOne, inputTwo, inputThree);
+  formTwo.append(inputFour, inputFive, inputSix);
+
+  const controlButtons = document.createElement('div');
+  controlButtons.classList.add('control-buttons');
+  const buttonThree = document.createElement('button');
+  buttonThree.textContent = 'Race';
+  buttonThree.setAttribute('type', 'button');
+  buttonThree.classList.add('btn', 'btn-1');
+
+  const buttonFour = document.createElement('button');
+  buttonFour.textContent = 'Reset';
+  buttonFour.setAttribute('type', 'button');
+  buttonFour.classList.add('btn', 'btn-1');
+
+  const buttonFive = document.createElement('button');
+  buttonFive.textContent = 'Generate cars';
+  buttonFive.setAttribute('type', 'button');
+  buttonFive.classList.add('btn');
+
+  controlButtons.append(buttonThree, buttonFour, buttonFive);
+  formWrapper.append(formOne, formTwo, controlButtons);
+  header.append(headerWrapper, formWrapper);
+  root?.append(header);
+}
+
+export function renderBody(): void {
+  const root = document.getElementById('root')
+  const section = document.createElement('section');
+
+  const contentWrapper = document.createElement('div');
+  contentWrapper.classList.add('garage-wrapper');
+  const content = document.createElement('h2');
+  content.textContent = 'Garage';
+  const contentDesc = document.createElement('p');
+  contentDesc.classList.add('count-cars');
+  contentDesc.textContent = '(6)';
+  contentWrapper.append(content, contentDesc);
+
+  const pageWrapper = document.createElement('div');
+  pageWrapper.classList.add('page-wrapper');
+  const page = document.createElement('h3');
+  page.textContent = 'Page';
+  const countPage = document.createElement('p');
+  countPage.classList.add('count-page');
+  countPage.textContent = '#1';
+  pageWrapper.append(page, countPage);
+
+  section.append(contentWrapper, pageWrapper);
+  root?.append(section);
+}
+
 export function renderCars(arr: Car[]): void {
-  const element = document.querySelector('.car-main') as Element;
+  const root = document.getElementById('root') as Element;
   arr.forEach((el: { name: string; color: string; id?: number }) => {
     const newElem = document.createElement('div');
     newElem.innerHTML = `
@@ -122,6 +220,6 @@ export function renderCars(arr: Car[]): void {
         </div>
       </div>
     `;
-    element.append(newElem);
+    root.append(newElem);
   });
 }

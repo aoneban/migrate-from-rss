@@ -44,10 +44,8 @@ export const mainToDelete = async (id: number): Promise<void> => {
   const deleteCars = await deleteCar(id);
 };
 
-export const updateCar = async (
-  id: number,
-  body: { name: string; color: string }
-): Promise<void> => {
+// eslint-disable-next-line prettier/prettier
+export const updateCar = async (id: number, body: { name: string; color: string }): Promise<void> => {
   const result = await fetch(`${getUrl}${path.garage}/${id}`, {
     method: 'PUT',
     headers: {
