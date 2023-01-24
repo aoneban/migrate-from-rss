@@ -88,13 +88,9 @@ export async function driveCar(): Promise<void> {
         const { id }: any = e.currentTarget;
         const parentElem = (e.currentTarget as any).parentElement;
         const currentImg = parentElem.nextSibling;
-        const currentImg2 = currentImg.nextSibling;
-        const newImg = currentImg2.firstChild;
-        const newImg2 = newImg.nextSibling;
-        const newImg3 = newImg2.nextSibling;
-        const newImg4 = newImg3.nextSibling;
-        const newImg5 = newImg4.nextSibling;
-        const newImg6 = newImg5.nextSibling;
+        const currentImgTwo = currentImg.lastChild;
+        const currentImgThree = currentImgTwo.lastChild;
+        const currentImgFour = currentImgThree.previousSibling;
         const time = await getMaxSpeedToCar(id);
         const speed = time / 200;
         let width = 6;
@@ -105,7 +101,7 @@ export async function driveCar(): Promise<void> {
             clearInterval(index);
           } else {
             width++;
-            newImg6.style.width = `${width}%`;
+            currentImgFour.style.width = `${width}%`;
           }
         }
       });
