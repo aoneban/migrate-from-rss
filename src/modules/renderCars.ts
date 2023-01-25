@@ -54,6 +54,7 @@ export function renderHeader(): void {
   const buttonThree = document.createElement('button');
   buttonThree.textContent = 'Race';
   buttonThree.setAttribute('type', 'button');
+  buttonThree.setAttribute('id', 'race');
   buttonThree.classList.add('btn', 'btn-1');
 
   const buttonFour = document.createElement('button');
@@ -73,16 +74,17 @@ export function renderHeader(): void {
 }
 
 export function renderBody(): void {
-  const root = document.getElementById('root')
+  const root = document.getElementById('root');
   const section = document.createElement('section');
 
   const contentWrapper = document.createElement('div');
   contentWrapper.classList.add('garage-wrapper');
   const content = document.createElement('h2');
+  content.classList.add('garage');
   content.textContent = 'Garage';
   const contentDesc = document.createElement('p');
   contentDesc.classList.add('count-cars');
-  contentDesc.textContent = '(6)';
+  contentDesc.textContent = '()';
   contentWrapper.append(content, contentDesc);
 
   const pageWrapper = document.createElement('div');
@@ -155,7 +157,7 @@ export function renderCars(arr: Car[]): void {
       <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
       "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-       width="7%" height="40.000000pt" viewBox="0 0 1280.000000 640.000000"
+       width="7%" id="${el.id}" height="40.000000pt" viewBox="0 0 1280.000000 640.000000"
        preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
       fill=${el.color} stroke="none">

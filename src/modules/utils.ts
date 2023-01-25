@@ -28,3 +28,12 @@ export const getButtons = (): void => {
     });
   });
 };
+
+export function countCars(): void {
+  setTimeout(() => {
+    const newImg = document.querySelectorAll('.cars-img');
+    const garage = document.querySelector('.count-cars') as HTMLElement;
+    const count = newImg.length.toString();
+    garage.innerText = `(${count})`;
+  }, 500);
+}
