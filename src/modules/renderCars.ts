@@ -1,7 +1,7 @@
 import { Car } from './types';
 
 export function renderHeader(): void {
-  const root = document.getElementById('root');
+  const root = document.getElementById('root') as HTMLTemplateElement;
   const header = document.createElement('header');
   const headerWrapper = document.createElement('div');
   headerWrapper.classList.add('header-buttons');
@@ -64,7 +64,8 @@ export function renderHeader(): void {
 
   const buttonFive = document.createElement('button');
   buttonFive.textContent = 'Generate cars';
-  buttonFive.setAttribute('type', 'button');
+  buttonFive.classList.add('generate-cars');
+  buttonFive.setAttribute('type', 'submit');
   buttonFive.classList.add('btn');
 
   controlButtons.append(buttonThree, buttonFour, buttonFive);
@@ -260,4 +261,20 @@ export function renderCars(arr: Car[]): void {
     carsContainer.append(controlEngine, carsImg);
     root.append(controlButtons, carsContainer);
   });
+}
+
+export function renderFooter(): void {
+  setTimeout(() => {
+    const root = document.getElementById('root');
+    const pagination = document.createElement('div');
+    pagination.classList.add('pagination');
+    const buttonOne = document.createElement('button');
+    buttonOne.classList.add('prev');
+    buttonOne.textContent = '< Prev';
+    const buttonTwo = document.createElement('button');
+    buttonTwo.classList.add('next');
+    buttonTwo.textContent = 'Next >';
+    pagination.append(buttonOne, buttonTwo);
+    root?.append(pagination);
+  }, 500);
 }

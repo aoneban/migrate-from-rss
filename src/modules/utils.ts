@@ -1,4 +1,5 @@
 import { mainToCreate, mainToDelete, mainToUpdate } from './api';
+import { generateRandomColors } from './helpers';
 
 export const getInputValueToCreate = (): void => {
   const input = document.querySelector('.btn-6');
@@ -37,3 +38,19 @@ export function countCars(): void {
     garage.innerText = `(${count})`;
   }, 500);
 }
+
+export const generateToHundredCars = (): void => {
+  const input = document.querySelector('.generate-cars') as HTMLButtonElement;
+  input?.addEventListener('click', async () => {
+    for (let i = 0; i <= 100; i++) {
+      const inputValueCar = `Mercedes-00${i}`;
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      const inputValueColor = generateRandomColors();
+      // eslint-disable-next-line no-await-in-loop
+      await mainToCreate(inputValueCar, inputValueColor);
+      input.disabled = true;
+    }
+    window.location.reload();
+    input.disabled = false;
+  });
+};

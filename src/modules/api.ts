@@ -48,6 +48,7 @@ export const mainToDelete = async (id: number): Promise<void> => {
 // eslint-disable-next-line prettier/prettier
 export const updateCar = async (
   id: number,
+  // eslint-disable-next-line @typescript-eslint/comma-dangle
   body: { name: string; color: string }
 ): Promise<void> => {
   const result = await fetch(`${getUrl}${path.garage}/${id}`, {
@@ -86,9 +87,9 @@ export const getMaxSpeedToCar = async (id: number): Promise<Started> => {
 
 export async function driveCar(): Promise<void> {
   setTimeout(() => {
-    const myButton = document.querySelectorAll('.btn-A');
+    const myButton = document.querySelectorAll('.btn-A') as NodeList;
     myButton.forEach((el) => {
-      el.addEventListener('click', async (e) => {
+      el.addEventListener('click', async (e: Event) => {
         const { id }: any = e.currentTarget;
         const parentElem = (e.currentTarget as any).parentElement;
         const currentImg = parentElem.nextSibling;
@@ -114,24 +115,24 @@ export async function driveCar(): Promise<void> {
 }
 
 export async function driveAllCars(): Promise<void> {
-  setTimeout(() => {
-    const myButton = document.getElementById('race') as Element;
+  setTimeout((): void => {
+    const myButton = document.getElementById('race') as HTMLElement;
     myButton.addEventListener('click', async () => {
-      const images = document.getElementsByClassName('img-main');
+      const images = document.getElementsByClassName('img-main') as HTMLCollection;
       for (let i = 0; i <= images.length; i++) {
         const imagesTwo = images[i].firstChild;
         const imagesThree = imagesTwo?.nextSibling;
         const imagesFour = imagesThree?.nextSibling;
-        const imagesFive = imagesFour?.nextSibling as ChildNode | any;
-        const { id }: any = imagesFive;
+        const imagesFive = imagesFour?.nextSibling as HTMLImageElement;
+        const { id }: HTMLImageElement = imagesFive;
         // eslint-disable-next-line no-await-in-loop
-        const time: any = await getMaxSpeedToCar(id);
-        const speed = time / 200;
+        const time = await getMaxSpeedToCar(id as unknown as number);
+        const speed: number = (time as unknown as number) / 200;
         let width = 6;
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
         const index = setInterval(frame, speed);
-        // eslint-disable-next-line no-inner-declarations, @typescript-eslint/no-loop-func
-        function frame() {
+        // eslint-disable-next-line no-inner-declarations
+        function frame(): void {
           if (width === 190) {
             clearInterval(index);
           } else {
@@ -143,5 +144,3 @@ export async function driveAllCars(): Promise<void> {
     });
   }, 0);
 }
-
-driveAllCars();

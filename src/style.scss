@@ -32,6 +32,17 @@ input {
   margin-left: 5px;
 }
 
+.pagination {
+  margin: 20px 0;
+  display: block;
+}
+
+.generate-cars{
+  &:hover {
+    background: #999999;
+  }
+}
+
 #car-color,
 #car-color-update {
   -webkit-appearance: none;
@@ -63,6 +74,9 @@ input {
 .btn-1 {
   color: #ffffff;
   background: orange;
+  &:hover {
+    background: orangered;
+  }
 }
 
 .btn-2 {
