@@ -1,24 +1,25 @@
+import { getCars } from './api';
 import { Car } from './types';
 
 export function renderHeader(): void {
   const root = document.getElementById('root') as HTMLTemplateElement;
-  const header = document.createElement('header');
-  const headerWrapper = document.createElement('div');
+  const header = document.createElement('header') as HTMLTemplateElement;
+  const headerWrapper = document.createElement('div') as Element;
   headerWrapper.classList.add('header-buttons');
-  const buttonOne = document.createElement('button');
+  const buttonOne = document.createElement('button') as HTMLButtonElement;
   buttonOne.classList.add('btn', 'btn-1');
   buttonOne.textContent = 'To garage';
-  const buttonTwo = document.createElement('button');
+  const buttonTwo = document.createElement('button') as HTMLButtonElement;
   buttonTwo.classList.add('btn', 'btn-1');
   buttonTwo.textContent = 'To winners';
   headerWrapper.append(buttonOne, buttonTwo);
 
-  const formWrapper = document.createElement('div');
+  const formWrapper = document.createElement('div') as HTMLElement;
   formWrapper.classList.add('form-choose');
-  const formOne = document.createElement('form');
-  const inputOne = document.createElement('input');
-  const inputTwo = document.createElement('input');
-  const inputThree = document.createElement('input');
+  const formOne = document.createElement('form') as HTMLFormElement;
+  const inputOne = document.createElement('input') as HTMLInputElement;
+  const inputTwo = document.createElement('input') as HTMLInputElement;
+  const inputThree = document.createElement('input') as HTMLInputElement;
   inputOne.setAttribute('type', 'text');
   inputOne.setAttribute('id', 'car-name');
   inputOne.setAttribute('name', 'car-name');
@@ -31,10 +32,10 @@ export function renderHeader(): void {
   inputThree.setAttribute('value', 'Create');
   inputThree.classList.add('btn-3', 'btn-6');
 
-  const formTwo = document.createElement('form');
-  const inputFour = document.createElement('input');
-  const inputFive = document.createElement('input');
-  const inputSix = document.createElement('input');
+  const formTwo = document.createElement('form') as HTMLFormElement;
+  const inputFour = document.createElement('input') as HTMLInputElement;
+  const inputFive = document.createElement('input') as HTMLInputElement;
+  const inputSix = document.createElement('input') as HTMLInputElement;
   inputFour.setAttribute('type', 'text');
   inputFour.setAttribute('id', 'car-name-update');
   inputFour.setAttribute('name', 'car-name-update');
@@ -49,20 +50,20 @@ export function renderHeader(): void {
   formOne.append(inputOne, inputTwo, inputThree);
   formTwo.append(inputFour, inputFive, inputSix);
 
-  const controlButtons = document.createElement('div');
+  const controlButtons = document.createElement('div') as HTMLElement;
   controlButtons.classList.add('control-buttons');
-  const buttonThree = document.createElement('button');
+  const buttonThree = document.createElement('button') as HTMLButtonElement;
   buttonThree.textContent = 'Race';
   buttonThree.setAttribute('type', 'button');
   buttonThree.setAttribute('id', 'race');
   buttonThree.classList.add('btn', 'btn-1');
 
-  const buttonFour = document.createElement('button');
+  const buttonFour = document.createElement('button') as HTMLButtonElement;
   buttonFour.textContent = 'Reset';
   buttonFour.setAttribute('type', 'button');
   buttonFour.classList.add('btn', 'btn-1');
 
-  const buttonFive = document.createElement('button');
+  const buttonFive = document.createElement('button') as HTMLButtonElement;
   buttonFive.textContent = 'Generate cars';
   buttonFive.classList.add('generate-cars');
   buttonFive.setAttribute('type', 'submit');
@@ -75,24 +76,24 @@ export function renderHeader(): void {
 }
 
 export function renderBody(): void {
-  const root = document.getElementById('root');
-  const section = document.createElement('section');
+  const root = document.getElementById('root') as HTMLTemplateElement;
+  const section = document.createElement('section') as HTMLTemplateElement;
 
-  const contentWrapper = document.createElement('div');
+  const contentWrapper = document.createElement('div') as HTMLElement;
   contentWrapper.classList.add('garage-wrapper');
-  const content = document.createElement('h2');
+  const content = document.createElement('h2') as HTMLElement;
   content.classList.add('garage');
   content.textContent = 'Garage';
-  const contentDesc = document.createElement('p');
+  const contentDesc = document.createElement('p') as HTMLElement;
   contentDesc.classList.add('count-cars');
   contentDesc.textContent = '()';
   contentWrapper.append(content, contentDesc);
 
-  const pageWrapper = document.createElement('div');
+  const pageWrapper = document.createElement('div') as HTMLElement;
   pageWrapper.classList.add('page-wrapper');
-  const page = document.createElement('h3');
+  const page = document.createElement('h3') as HTMLElement;
   page.textContent = 'Page';
-  const countPage = document.createElement('p');
+  const countPage = document.createElement('p') as HTMLElement;
   countPage.classList.add('count-page');
   countPage.textContent = '#1';
   pageWrapper.append(page, countPage);
@@ -101,42 +102,43 @@ export function renderBody(): void {
   root?.append(section);
 }
 
-export function renderCars(arr: Car[]): void {
-  const root = document.getElementById('root') as Element;
-  arr.forEach((el: { name: string; color: string; id?: number }) => {
-    const newElement = document.createElement('div');
+export async function renderCars(): Promise<void> {
+  const data = (await getCars()) as unknown as [];
+  const root = document.getElementById('root') as HTMLTemplateElement;
+  data.forEach((el: Car) => {
+    const newElement = document.createElement('div') as HTMLElement;
     newElement.classList.add('car-wrapper');
-    const controlButtons = document.createElement('div');
+    const controlButtons = document.createElement('div') as HTMLElement;
     controlButtons.classList.add('control-buttons');
-    const inputOne = document.createElement('input');
+    const inputOne = document.createElement('input') as HTMLInputElement;
     inputOne.classList.add('btn', 'btn-select');
     inputOne.setAttribute('type', 'submit');
     inputOne.setAttribute('id', `${el.id}`);
     inputOne.setAttribute('value', 'Select');
 
-    const inputTwo = document.createElement('input');
+    const inputTwo = document.createElement('input') as HTMLInputElement;
     inputTwo.classList.add('btn', 'btn-remove');
     inputTwo.setAttribute('type', 'submit');
     inputTwo.setAttribute('id', `${el.id}`);
     inputTwo.setAttribute('value', 'Remove');
 
-    const carName = document.createElement('p');
+    const carName = document.createElement('p') as HTMLElement;
     carName.classList.add('car-name');
     carName.textContent = el.name;
 
     controlButtons.append(inputOne, inputTwo, carName);
 
-    const carsContainer = document.createElement('div');
+    const carsContainer = document.createElement('div') as HTMLElement;
     carsContainer.classList.add('cars-container-img');
-    const controlEngine = document.createElement('div');
+    const controlEngine = document.createElement('div') as HTMLElement;
     controlEngine.classList.add('control-engine');
-    const buttonOne = document.createElement('button');
+    const buttonOne = document.createElement('button') as HTMLButtonElement;
     buttonOne.classList.add('btn-2', 'btn-A');
     buttonOne.setAttribute('id', `${el.id}`);
     buttonOne.setAttribute('type', 'button');
     buttonOne.textContent = 'A';
 
-    const buttonTwo = document.createElement('button');
+    const buttonTwo = document.createElement('button') as HTMLButtonElement;
     buttonTwo.classList.add('btn-2', 'btn-B');
     buttonTwo.setAttribute('id', `${el.id}`);
     buttonTwo.setAttribute('type', 'button');
@@ -144,14 +146,14 @@ export function renderCars(arr: Car[]): void {
 
     controlEngine.append(buttonOne, buttonTwo);
 
-    const carsImg = document.createElement('div');
+    const carsImg = document.createElement('div') as HTMLElement;
     carsImg.setAttribute('id', `${el.id}`);
     carsImg.classList.add('cars-img');
-    const finishImg = document.createElement('img');
+    const finishImg = document.createElement('img') as HTMLImageElement;
     finishImg.classList.add('finish');
     finishImg.src = './finish.png';
     finishImg.alt = 'finish';
-    const imgSVG = document.createElement('div');
+    const imgSVG = document.createElement('div') as HTMLElement;
     imgSVG.classList.add('img-main');
     imgSVG.innerHTML = `
     <?xml version="1.0" standalone="no"?>
@@ -265,13 +267,13 @@ export function renderCars(arr: Car[]): void {
 
 export function renderFooter(): void {
   setTimeout(() => {
-    const root = document.getElementById('root');
+    const root = document.getElementById('root') as HTMLTemplateElement;
     const pagination = document.createElement('div');
     pagination.classList.add('pagination');
-    const buttonOne = document.createElement('button');
+    const buttonOne = document.createElement('button') as HTMLButtonElement;
     buttonOne.classList.add('prev');
     buttonOne.textContent = '< Prev';
-    const buttonTwo = document.createElement('button');
+    const buttonTwo = document.createElement('button') as HTMLButtonElement;
     buttonTwo.classList.add('next');
     buttonTwo.textContent = 'Next >';
     pagination.append(buttonOne, buttonTwo);

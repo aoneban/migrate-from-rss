@@ -1,5 +1,7 @@
 import './style.scss';
 import { getCars, driveCar, driveAllCars } from './modules/api';
+// eslint-disable-next-line object-curly-newline
+import { renderHeader, renderCars, renderBody, renderFooter } from './modules/renderCars';
 import {
   getInputValueToCreate,
   getButtons,
@@ -7,10 +9,10 @@ import {
   countCars,
   generateToHundredCars,
 } from './modules/utils';
-import { renderHeader, renderBody, renderFooter } from './modules/renderCars';
 
 renderHeader();
 renderBody();
+renderCars();
 renderFooter();
 countCars();
 getCars();

@@ -1,5 +1,4 @@
-import { renderCars } from './renderCars';
-import { Started } from './types';
+import { Started, Car } from './types';
 
 const getUrl = 'http://localhost:3000';
 const path = {
@@ -7,14 +6,13 @@ const path = {
   engine: '/engine',
 };
 
-export const getCars = async (): Promise<void> => {
+export const getCars = async (): Promise<Car> => {
   const result = await fetch(`${getUrl}${path.garage}`);
-  const data = await result.json();
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
-  renderCars(data);
+  const data: Car = await result.json();
+  return data;
 };
 
-export const createCar = async (body: { name: string; color: string }): Promise<void> => {
+export const createCar = async (body: { name: string; color: string }): Promise<Car> => {
   const result = await fetch(`${getUrl}${path.garage}`, {
     method: 'POST',
     headers: {
@@ -22,7 +20,7 @@ export const createCar = async (body: { name: string; color: string }): Promise<
     },
     body: JSON.stringify(body),
   });
-  const data = await result.json();
+  const data: Car = await result.json();
   return data;
 };
 
@@ -33,11 +31,11 @@ export const mainToCreate = async (car: string, color: string): Promise<void> =>
   });
 };
 
-export const deleteCar = async (id: number): Promise<void> => {
+export const deleteCar = async (id: number): Promise<Car> => {
   const result = await fetch(`${getUrl}${path.garage}/${id}`, {
     method: 'DELETE',
   });
-  const deleteCars = await result.json();
+  const deleteCars: Car = await result.json();
   return deleteCars;
 };
 
@@ -45,12 +43,11 @@ export const mainToDelete = async (id: number): Promise<void> => {
   const deleteCars = await deleteCar(id);
 };
 
-// eslint-disable-next-line prettier/prettier
 export const updateCar = async (
   id: number,
-  // eslint-disable-next-line @typescript-eslint/comma-dangle
-  body: { name: string; color: string }
-): Promise<void> => {
+  // eslint-disable-next-line prettier/prettier
+  body: { name: string; color: string },
+): Promise<Car> => {
   const result = await fetch(`${getUrl}${path.garage}/${id}`, {
     method: 'PUT',
     headers: {
@@ -58,7 +55,7 @@ export const updateCar = async (
     },
     body: JSON.stringify(body),
   });
-  const data = await result.json();
+  const data: Car = await result.json();
   return data;
 };
 
@@ -73,7 +70,7 @@ export const getToSpeed = async (id: number): Promise<Started> => {
   const result = await fetch(`${getUrl}${path.engine}?id=${id}&status=started`, {
     method: 'PATCH',
   });
-  const data = await result.json();
+  const data: Started = await result.json();
   return data;
 };
 
@@ -90,14 +87,17 @@ export async function driveCar(): Promise<void> {
     const myButton = document.querySelectorAll('.btn-A') as NodeList;
     myButton.forEach((el) => {
       el.addEventListener('click', async (e: Event) => {
-        const { id }: any = e.currentTarget;
-        const parentElem = (e.currentTarget as any).parentElement;
-        const currentImg = parentElem.nextSibling;
-        const currentImgTwo = currentImg.lastChild;
-        const currentImgThree = currentImgTwo.lastChild;
-        const currentImgFour = currentImgThree.previousSibling;
-        const time: any = await getMaxSpeedToCar(id);
-        const speed = time / 200;
+        const targetElement = e.currentTarget as HTMLInputElement;
+        const newId = Number(targetElement.id) as number;
+        const parentElem = e.currentTarget as HTMLInputElement;
+        const newParentElement = parentElem.parentElement as HTMLTemplateElement;
+        const currentImg = newParentElement.nextSibling as HTMLTemplateElement;
+        const currentImgTwo = currentImg.lastChild as HTMLTemplateElement;
+        const currentImgThree = currentImgTwo.lastChild as HTMLTemplateElement;
+        const currentImgFour = currentImgThree.previousSibling as HTMLTemplateElement;
+        const time = await getMaxSpeedToCar(newId);
+        console.log(time);
+        const speed = (time as never) / 200;
         let width = 6;
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
         const index = setInterval(frame, speed);
@@ -120,9 +120,9 @@ export async function driveAllCars(): Promise<void> {
     myButton.addEventListener('click', async () => {
       const images = document.getElementsByClassName('img-main') as HTMLCollection;
       for (let i = 0; i <= images.length; i++) {
-        const imagesTwo = images[i].firstChild;
-        const imagesThree = imagesTwo?.nextSibling;
-        const imagesFour = imagesThree?.nextSibling;
+        const imagesTwo = images[i].firstChild as Element;
+        const imagesThree = imagesTwo?.nextSibling as HTMLTemplateElement;
+        const imagesFour = imagesThree?.nextSibling as HTMLTemplateElement;
         const imagesFive = imagesFour?.nextSibling as HTMLImageElement;
         const { id }: HTMLImageElement = imagesFive;
         // eslint-disable-next-line no-await-in-loop
