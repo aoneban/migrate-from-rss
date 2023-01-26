@@ -8,11 +8,13 @@ import {
   getInputValueToUpdate,
   countCars,
   generateToHundredCars,
+  buttonSelectId,
 } from './modules/utils';
 
 renderHeader();
 renderBody();
 renderCars();
+buttonSelectId();
 renderFooter();
 countCars();
 getCars();

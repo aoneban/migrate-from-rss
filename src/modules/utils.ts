@@ -1,6 +1,8 @@
 import { mainToCreate, mainToDelete, mainToUpdate } from './api';
 import { generateRandomColors } from './helpers';
 
+let INDEX_CAR_TO_UPDATE = 0;
+
 export const getInputValueToCreate = (): void => {
   const input = document.querySelector('.btn-6') as HTMLInputElement;
   input?.addEventListener('click', () => {
@@ -10,13 +12,25 @@ export const getInputValueToCreate = (): void => {
   });
 };
 
+export const buttonSelectId = (): void => {
+  setTimeout(() => {
+    const buttons = document.querySelectorAll('.btn-select');
+    buttons.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        const newindex = e.currentTarget as HTMLInputElement;
+        newindex.style.backgroundColor = 'orange';
+        INDEX_CAR_TO_UPDATE += Number(newindex.id);
+      });
+    });
+  }, 500);
+};
+
 export const getInputValueToUpdate = (): void => {
-  const len = document.getElementsByClassName('cars-img') as HTMLCollection;
   const input = document.querySelector('.btn-7') as HTMLInputElement;
-  input?.addEventListener('click', () => {
+  input?.addEventListener('click', async () => {
     const inputValueCar = (document.getElementById('car-name-update') as HTMLInputElement).value;
     const inputValueColor = (document.getElementById('car-color-update') as HTMLInputElement).value;
-    mainToUpdate(len.length, inputValueCar, inputValueColor);
+    await mainToUpdate(INDEX_CAR_TO_UPDATE, inputValueCar, inputValueColor);
   });
 };
 

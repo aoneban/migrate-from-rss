@@ -25,7 +25,7 @@ export const createCar = async (body: { name: string; color: string }): Promise<
 };
 
 export const mainToCreate = async (car: string, color: string): Promise<void> => {
-  const data = await createCar({
+  await createCar({
     name: car,
     color,
   });
@@ -40,7 +40,7 @@ export const deleteCar = async (id: number): Promise<Car> => {
 };
 
 export const mainToDelete = async (id: number): Promise<void> => {
-  const deleteCars = await deleteCar(id);
+  await deleteCar(id);
 };
 
 export const updateCar = async (
@@ -60,7 +60,7 @@ export const updateCar = async (
 };
 
 export const mainToUpdate = async (id: number, car: string, color: string): Promise<void> => {
-  const data = await updateCar(id, {
+  await updateCar(id, {
     name: car,
     color,
   });
@@ -96,7 +96,6 @@ export async function driveCar(): Promise<void> {
         const currentImgThree = currentImgTwo.lastChild as HTMLTemplateElement;
         const currentImgFour = currentImgThree.previousSibling as HTMLTemplateElement;
         const time = await getMaxSpeedToCar(newId);
-        console.log(time);
         const speed = (time as never) / 200;
         let width = 6;
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
