@@ -93,6 +93,9 @@ input {
 .btn-remove,
 .btn-select {
   height: 31px;
+  &:hover {
+    background: #999999;
+  }
 }
 
 .finish {

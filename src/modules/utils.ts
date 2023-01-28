@@ -5,21 +5,27 @@ let INDEX_CAR_TO_UPDATE = 0;
 
 export const getInputValueToCreate = (): void => {
   const input = document.querySelector('.btn-6') as HTMLInputElement;
-  input?.addEventListener('click', () => {
+  input?.addEventListener('click', async () => {
     const inputValueCar = (document.getElementById('car-name') as HTMLInputElement).value;
     const inputValueColor = (document.getElementById('car-color') as HTMLInputElement).value;
-    mainToCreate(inputValueCar, inputValueColor);
+    await mainToCreate(inputValueCar, inputValueColor);
   });
 };
 
 export const buttonSelectId = (): void => {
   setTimeout(() => {
     const buttons = document.querySelectorAll('.btn-select');
+    const input = document.getElementById('car-name-update') as HTMLInputElement;
     buttons.forEach((el) => {
       el.addEventListener('click', (e) => {
-        const newindex = e.currentTarget as HTMLInputElement;
-        newindex.style.backgroundColor = 'orange';
-        INDEX_CAR_TO_UPDATE += Number(newindex.id);
+        if (e.currentTarget !== null) {
+          const one = (e.currentTarget as HTMLInputElement).nextSibling;
+          const two = (one as HTMLInputElement).nextSibling;
+          const three = (two as HTMLElement).innerText;
+          const newindex = e.currentTarget as HTMLInputElement;
+          INDEX_CAR_TO_UPDATE += Number(newindex.id);
+          input.value = three;
+        }
       });
     });
   }, 500);
