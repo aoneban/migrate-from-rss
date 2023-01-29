@@ -104,7 +104,6 @@ export function renderBody(): void {
 
 export async function renderCars(): Promise<void> {
   const data = (await getCars()) as unknown as [];
-  console.log(data);
   const root = document.getElementById('root') as HTMLTemplateElement;
   data.forEach((el: Car) => {
     const newElement = document.createElement('div') as HTMLElement;
