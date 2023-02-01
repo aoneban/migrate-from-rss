@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: darkslategrey;
+  color: white;
+  text-transform: uppercase;
+}
+
+.cars-img {
+  display: block;
+
+}
+.cars-container-img{
+  display: block;
+  border-bottom: 2px dashed #ffffff;
+}
+
+input {
+  max-width: 150px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+
+.car-name {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.pagination {
+  margin: 20px 0;
+  display: block;
+}
+
+.generate-cars{
+  &:hover {
+    background: #999999;
+  }
+}
+
+#car-color,
+#car-color-update {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 48px;
+  height: 36px;
+  border-radius: 10px;
+  appearance: none;
+  border: 1px solid #999;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  top: 9px;
+}
+
+.control-buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 3px;
+  padding: 7px 20px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font: normal 14px Tahoma;
+}
+
+.btn-1 {
+  color: #ffffff;
+  background: orange;
+  &:hover {
+    background: orangered;
+  }
+}
+
+.btn-2 {
+  padding: 2px 5px;
+}
+
+.btn-3 {
+  height: 30px;
+  width: 100px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.btn-remove,
+.btn-select {
+  height: 31px;
+  &:hover {
+    background: #999999;
+  }
+}
+
+.finish {
+  display: block;
+  position: absolute;
+  right: 150px;
+  width: 80px;
+}
+
+.garage-wrapper,
+.control-buttons,
+.page-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.img-main {
+  width: 100%;
+  overflow: hidden;
+}
