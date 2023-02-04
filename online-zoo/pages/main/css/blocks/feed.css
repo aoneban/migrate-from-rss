@@ -1,0 +1,342 @@
+.feed-instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow-green {
+  display: none;
+}
+
+.feed {
+  padding-top: 69px;
+  padding-bottom: 100px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  opacity: 0.9;
+}
+
+.btn-feed {
+  display: block;
+  margin: 0 auto;
+  width: 298px;
+  height: 54px;
+  left: calc(50% - 149px);
+  top: 791px;
+}
+
+.feed-wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 1160px;
+  background: rgba(253, 253, 255, 0.52);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding-bottom: 50px;
+}
+
+.svg {
+  width: 168px;
+  height: 168px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #f9804b;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.feed-doing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.pick-and-feed {
+  display: block;
+  padding: 45px 0 30px 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  /* identical to box height, or 58px */
+  text-align: center;
+  color: #fe9013;
+}
+
+.p-bold {
+  display: block;
+  padding-bottom: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333b41;
+  margin-right: 100px;
+}
+
+.small-bold {
+  display: block;
+  margin-left: 59px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #333b41;
+  padding-bottom: 10px;
+}
+
+.p-simple {
+  display: block;
+  margin-left: 99px;
+  margin-right: 190px;
+  padding-bottom: 60px;
+}
+
+.p-simple a {
+  text-decoration: none;
+  color: #333b41;
+}
+
+.item-one {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 29px 70px;
+}
+
+.emergency {
+  border-bottom: 1px solid #fe9013;
+}
+
+@media (max-width: 1300px) {
+  .feed-wrapper {
+    max-width: 940px;
+    padding-bottom: 8px;
+  }
+  .feed {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .pick-and-feed {
+    position: relative;
+    top: -15px;
+    left: -6px;
+  }
+  .p-bold {
+    position: relative;
+    left: 2px;
+    bottom: 24px;
+    margin-right: 0;
+  }
+  .small-bold {
+    position: relative;
+    top: -43px;
+    left: -8px;
+    margin-right: 67px;
+  }
+  .p-simple {
+    margin-right: 28px;
+    position: relative;
+    top: -43px;
+    left: -48px;
+  }
+  .how-it-works {
+    position: relative;
+    top: -66px;
+    left: -4px;
+    margin-bottom: -67px;
+  }
+  .feed-doing {
+    padding-top: -30px;
+  }
+  .btn-feed {
+    left: 1px;
+    top: 5px;
+    position: relative;
+    margin-bottom: 49px;
+  }
+}
+
+@media (max-width: 840px) {
+  .feed {
+    padding-top: 19px;
+    padding-bottom: 20px;
+  }
+  .pick-and-feed {
+    position: relative;
+    top: -35px;
+    left: -9px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 120%;
+  }
+  .p-bold {
+    left: 21px;
+    bottom: 45px;
+    margin-right: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: #333b41;
+  }
+  .small-bold {
+    position: relative;
+    top: -66px;
+    left: -39px;
+    margin-right: -24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333b41;
+  }
+  .p-simple {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333b41;
+    margin-right: -52px;
+    position: relative;
+    top: -66px;
+    left: -79px;
+  }
+  .how-it-works {
+    position: relative;
+    top: -103px;
+    left: -6px;
+    margin-bottom: -67px;
+  }
+  .arrow {
+    display: none;
+  }
+  .feed-doing {
+    padding: 0;
+  }
+  .item-one {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px 26px 14px;
+    margin-top: -16px;
+  }
+  .btn-feed {
+    top: 21px;
+  }
+  .btn-feed {
+    margin-bottom: 72px;
+  }
+  .arrow-green-1 {
+    display: block;
+    position: absolute;
+    top: 325px;
+    right: right;
+    left: 160px;
+  }
+  .arrow-green-2 {
+    display: block;
+    position: absolute;
+    top: 325px;
+    right: right;
+    left: 364px;
+  }
+}
+
+@media (max-width: 420px) {
+  .feed-wrapper {
+    max-width: 301px;
+  }
+  .pick-and-feed {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    position: relative;
+    top: -22px;
+  }
+  .p-bold {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: #333b41;
+    position: relative;
+    top: -42px;
+    left: -2px;
+  }
+  .small-bold,
+  .p-simple {
+    display: none;
+  }
+  .how-it-works h3 {
+    font-size: 24px;
+    position: relative;
+    top: 31px;
+  }
+  .feed-doing {
+    flex-wrap: wrap;
+  }
+  .item-one {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 27px 10px;
+    margin-top: -16px;
+  }
+  .item-one p {
+    position: relative;
+    top: -15px;
+  }
+  .arrow-green-1 {
+    display: block;
+    position: absolute;
+    top: 387px;
+    right: right;
+    left: 204px;
+    transform: rotate(0.24turn);
+  }
+  .arrow-green-2 {
+    display: block;
+    position: absolute;
+    top: 640px;
+    right: right;
+    left: 204px;
+    transform: rotate(0.24turn);
+  }
+  .btn-feed {
+    margin-bottom: 44px;
+    position: relative;
+    top: 10px;
+  }
+}
