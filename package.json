@@ -10,7 +10,7 @@
     "clear": "rd /s /q dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ashot Bahiran",
   "license": "ISC",
   "browserslistrc": [
     ">0.2%",
