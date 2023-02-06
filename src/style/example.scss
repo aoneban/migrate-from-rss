@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.header-wrap-start {
+  position: relative;
+  background: $back3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid $back;
+  align-items: center;
+  min-width: 80px;
+  height: 70px;
+  z-index: 10;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px 30px;
+  background: $text;
+  border-radius: 4px;
+  color: $text2;
+  &:hover {
+    background: rgb(210, 130, 226);
+  }
+}
+
+.invite {
+  color: $text2;
+  position: absolute;
+  z-index: 10000;
+  font-size: 1.2em;
+  top: 49%;
+  left: 38%;
+}
+
+.center {
+  text-decoration: none;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 10000;
+  color: $text2;
+  top: 40%;
+  background: none;
+  padding: 12px 55px;
+  left: 44%;
+  font-size: 20px;
+  border: 2px solid $back4;
+  &:hover {
+    background: $back4;
+  }
+}
+
+.footer-wrapper {
+  position: absolute;
+  background: $back3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid $back;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  bottom: 0;
+}
+
+.github {
+  width: 90px;
+  margin: 0;
+  text-align: center;
+}
+
+.dev {
+  text-align: center;
+}
+
+.dev a {
+  font-size: 25px;
+  text-decoration: none;
+  color: $text2;
+}
+
+.invite-wrapper {
+  font-size: 1.5em;
+  color: $text;
+  padding: 5px 10px;
+  position: absolute;
+  top: 19%;
+  left: 24.5%;
+}
+
+.text-content {
+  position: relative;
+  height: 223px;
+}
+
+.center-final {
+  position: absolute;
+  top: 53%;
+  left: 34%;
+  background: $text;
+  border: none;
+  opacity: 0.8;
+  &:hover {
+    background: $back4;
+  }
+}
+
+.close {
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 100;
+  right: 3%;
+  top: 1%;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .invite-wrapper {
+      left: 19%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+  .invite-wrapper {
+    left: 17%;
+  }
+  .center-final {
+    left: 28%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .invite-wrapper {
+    font-size: 1.2em;
+  }
+  .center-final {
+    left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 890px) {
+  .invite-wrapper {
+    font-size: 1.2em;
+    left: 9%;
+  }
+  .center-final {
+    left: 22%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .invite-wrapper {
+    font-size: 1.1em;
+    left: 2%;
+  }
+  .center-final {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .invite-wrapper {
+    font-size: 1.1em;
+    left: -2%;
+  }
+  .center-final {
+    left: 15%;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .invite-wrapper {
+    font-size: 1em;
+    left: -5%;
+  }
+  .center-final {
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .invite-wrapper {
+    font-size: 1em;
+    left: 5%;
+  }
+  .center-final {
+    padding: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .invite-wrapper {
+    font-size: 1em;
+    left: -5%;
+  }
+  .center-final {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+}
+

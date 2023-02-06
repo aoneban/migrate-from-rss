@@ -1,0 +1,41 @@
+.header-wrapper {
+  width: 75%;
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .gallery {
+    flex: 4;
+    text-align: right;
+    color: $back4;
+    &:hover {
+      color: $text;
+    }
+  }
+}
+
+body {
+  background-image: url(./img/fon-33.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+#lg {
+  font-family: "Cherry Bomb One Regular";
+  font-size: 34px;
+}
+
+.active {
+  font-size: 1.1em;
+  color: $text!important;
+}
